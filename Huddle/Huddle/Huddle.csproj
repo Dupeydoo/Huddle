@@ -181,13 +181,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\BasePage.cs">
+    <Compile Include="App_Code\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
-    </Content>
+    </Compile>
     <Compile Include="App_Code\BundleConfig.cs" />
     <Compile Include="App_Code\RouteConfig.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
