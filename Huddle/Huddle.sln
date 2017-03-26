@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huddle", "Huddle\Huddle.csproj", "{AB69A738-2361-4C5D-8BC3-0FC56DD2C77E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huddle.Tests", "Huddle.Tests\Huddle.Tests.csproj", "{D46F9B37-DE39-451B-BB6C-1A53739FAF8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB69A738-2361-4C5D-8BC3-0FC56DD2C77E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB69A738-2361-4C5D-8BC3-0FC56DD2C77E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB69A738-2361-4C5D-8BC3-0FC56DD2C77E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB69A738-2361-4C5D-8BC3-0FC56DD2C77E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46F9B37-DE39-451B-BB6C-1A53739FAF8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46F9B37-DE39-451B-BB6C-1A53739FAF8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46F9B37-DE39-451B-BB6C-1A53739FAF8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46F9B37-DE39-451B-BB6C-1A53739FAF8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
