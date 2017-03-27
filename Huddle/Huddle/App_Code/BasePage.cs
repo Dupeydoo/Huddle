@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Web;
 
-namespace Huddle.App_Code
+namespace Huddle
 {
     public class BasePage : System.Web.UI.Page
     {
