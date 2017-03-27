@@ -129,6 +129,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Templates\HuddleTemplate.aspx" />
     <Content Include="MasterPages\Main.Master" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -191,6 +192,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\HuddleTemplate.aspx.cs">
+      <DependentUpon>HuddleTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates\HuddleTemplate.aspx.designer.cs">
+      <DependentUpon>HuddleTemplate.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Huddle
 {
-    public partial class Huddle_Default : BasePage
+    public partial class Default : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

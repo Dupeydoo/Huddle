@@ -7,8 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-
-public partial class Huddle_Default
-{
+namespace Huddle {
+    
+    
+    public partial class Default {
+    }
 }
