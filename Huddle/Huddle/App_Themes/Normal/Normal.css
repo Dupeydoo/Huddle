@@ -1,0 +1,9 @@
+﻿body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.container-fluid {
+    padding: 0;
+}
