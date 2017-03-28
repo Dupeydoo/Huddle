@@ -7,8 +7,6 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link rel="stylesheet" type="text/css" href="../Content/bootstrap.min.css" />
-    <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/modernizr-2.8.3.js"></script>
 </head>
 <body>
@@ -28,7 +26,11 @@
             </section>
             <asp:ContentPlaceHolder ID="cpClientScript" runat="server">
             </asp:ContentPlaceHolder>
+            <footer>This is a footer</footer>
         </div>
     </form>
+
+    <link rel="stylesheet" type="text/css" href="../Content/bootstrap.min.css" />
+    <script src="../Scripts/bootstrap.min.js"></script>
 </body>
 </html>
