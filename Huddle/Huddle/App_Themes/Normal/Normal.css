@@ -35,6 +35,15 @@ body a:hover {
     border-radius: 0;
 }
 
+.container-fluid .navbar .navbar-right select {
+    margin-right: 50px;
+}
+
+.container-fluid .navbar .navbar-right li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 footer {
     background: #293f63; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#4d77bc, #293f63); /* For Safari 5.1 to 6.0 */

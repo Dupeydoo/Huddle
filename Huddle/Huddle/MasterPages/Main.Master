@@ -36,9 +36,11 @@
                             <li><a href="#">Admin</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <asp:DropDownList ID="ChooseTheme" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ChooseTheme_SelectedIndexChanged">
-                                <asp:ListItem>Normal</asp:ListItem>
-                            </asp:DropDownList>
+                            <li>
+                                <asp:DropDownList ID="ChooseTheme" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ChooseTheme_SelectedIndexChanged" ToolTip="Select a theme" Width="200px">
+                                    <asp:ListItem>Normal</asp:ListItem>
+                                </asp:DropDownList>
+                            </li>
                         </ul>
                     </div>
                 </nav>
