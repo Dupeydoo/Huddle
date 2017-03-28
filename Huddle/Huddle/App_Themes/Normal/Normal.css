@@ -1,9 +1,8 @@
-﻿body {
+﻿* {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
     text-decoration: none;
-    color: white;
-    background-color: #dde9ff;
+    color: white; 
 }
 
 body a, body a:visited, body a:active {
@@ -18,6 +17,7 @@ body a:hover {
 
 .container-fluid {
     padding: 0 !important;
+    background-color: #dde9ff;
 }
 
 .container-fluid header {
@@ -29,16 +29,21 @@ body a:hover {
     min-height: 100px;
     min-width: 100%;
     box-shadow: 2px 2px 2px #19263d;
-    position: fixed;
 }
 
-.container-fluid footer {
+.container-fluid .navbar {
+    border-radius: 0;
+}
+
+footer {
     background: #293f63; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#4d77bc, #293f63); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#4d77bc, #293f63); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#4d77bc, #293f63); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#4d77bc, #293f63); /* Standard syntax */
-    min-height: 200px;
-    margin-bottom: 0%;
+    min-height: 100px;
+    min-width: 100%;
+    border-top: 2px solid black;
 }
+
 

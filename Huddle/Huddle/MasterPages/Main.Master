@@ -18,16 +18,42 @@
         </asp:ScriptManager>
 
         <div class="container-fluid">
-            <header><a href="/">Home</a></header>
-            <nav id="MainMenu"></nav>
+            <header>
+            </header>
+
+            <div class="menu-wrapper">
+                <nav class="navbar navbar-inverse" id="MainMenu">
+                    <div>
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">Huddle</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Admin</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <asp:DropDownList ID="ChooseTheme" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ChooseTheme_SelectedIndexChanged">
+                                <asp:ListItem>Normal</asp:ListItem>
+                            </asp:DropDownList>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
             <section id="MainContent">
                 <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
                 </asp:ContentPlaceHolder>
             </section>
+
             <asp:ContentPlaceHolder ID="cpClientScript" runat="server">
             </asp:ContentPlaceHolder>
-            <footer>This is a footer</footer>
         </div>
+
+        <footer>This is a footer</footer>
     </form>
 
     <link rel="stylesheet" type="text/css" href="../Content/bootstrap.min.css" />
