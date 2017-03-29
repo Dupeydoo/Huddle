@@ -14,11 +14,5 @@ namespace Huddle.Controls
         {
 
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Thread.Sleep(5000);
-            lbltest.Text = "World!";
-        }
     }
 }
