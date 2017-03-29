@@ -111,7 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Normal\Normal.css" />
@@ -120,6 +119,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Controls\Categories.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -130,6 +130,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Images\ajax-loader.gif" />
     <Content Include="Templates\HuddleTemplate.aspx" />
     <Content Include="MasterPages\Main.Master" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
@@ -184,6 +185,13 @@
     </Compile>
     <Compile Include="App_Code\BundleConfig.cs" />
     <Compile Include="App_Code\RouteConfig.cs" />
+    <Compile Include="Controls\Categories.ascx.cs">
+      <DependentUpon>Categories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Categories.ascx.designer.cs">
+      <DependentUpon>Categories.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
