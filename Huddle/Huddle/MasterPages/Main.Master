@@ -25,25 +25,32 @@
                 <nav class="navbar navbar-inverse" id="MainMenu">
                     <div>
                         <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
                             <a class="navbar-brand" href="#">Huddle</a>
                         </div>
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Register</a></li>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Admin</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <asp:Label ID="lblChooseTheme" runat="server" Text="Select a theme: " CssClass="lblHeader"></asp:Label>
-                                <i class="fa fa-arrow-down"></i>
-                                <asp:DropDownList ID="ChooseTheme" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ChooseTheme_SelectedIndexChanged" ToolTip="Select a theme" Width="200px">
-                                    <asp:ListItem>Normal</asp:ListItem>
-                                </asp:DropDownList>
-                            </li>
-                        </ul>
+                        <div class="collapse navbar-collapse" id="collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">Register</a></li>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Admin</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="addMenuToCollapse">
+                                    <asp:Label ID="lblChooseTheme" runat="server" Text="Select a theme: " CssClass="lblHeader"></asp:Label>
+                                    <i class="fa fa-arrow-down"></i>
+                                    <asp:DropDownList ID="ChooseTheme" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ChooseTheme_SelectedIndexChanged" ToolTip="Select a theme" Width="200px">
+                                        <asp:ListItem>Normal</asp:ListItem>
+                                    </asp:DropDownList>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </div>

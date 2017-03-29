@@ -36,6 +36,18 @@ body a:hover {
     background-color: #1e2e48;
 }
 
+.container-fluid .navbar-inverse .navbar-toggle {
+    border: 0;
+}
+
+.container-fluid .navbar-inverse .navbar-toggle:focus, .container-fluid .navbar-inverse .navbar-toggle:hover {
+    background-color: #0f1724;
+}
+
+.container-fluid .navbar-inverse .navbar-nav li a {
+    padding-bottom: 18px;
+}
+
 .container-fluid .navbar-inverse .navbar-nav .active a, .container-fluid .navbar-inverse .navbar-nav li a:hover {
     background-color: #0f1724;
 }
@@ -51,6 +63,11 @@ body a:hover {
 .container-fluid .navbar .navbar-right li {
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.container-fluid .navbar .navbar-right .addMenuToCollapse {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 footer {
