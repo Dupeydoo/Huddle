@@ -37,6 +37,8 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
+                                <asp:Label ID="lblChooseTheme" runat="server" Text="Select a theme: " CssClass="lblHeader"></asp:Label>
+                                <i class="fa fa-arrow-down"></i>
                                 <asp:DropDownList ID="ChooseTheme" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ChooseTheme_SelectedIndexChanged" ToolTip="Select a theme" Width="200px">
                                     <asp:ListItem>Normal</asp:ListItem>
                                 </asp:DropDownList>
@@ -60,5 +62,7 @@
 
     <link rel="stylesheet" type="text/css" href="../Content/bootstrap.min.css" />
     <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/f828c052e9.js"></script>
+
 </body>
 </html>

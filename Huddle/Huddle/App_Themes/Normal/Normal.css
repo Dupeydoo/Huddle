@@ -33,6 +33,15 @@ body a:hover {
 
 .container-fluid .navbar {
     border-radius: 0;
+    background-color: #1e2e48;
+}
+
+.container-fluid .navbar-inverse .navbar-nav .active a, .container-fluid .navbar-inverse .navbar-nav li a:hover {
+    background-color: #0f1724;
+}
+
+.container-fluid .navbar .navbar-right .lblHeader {
+    margin-right: 5px;
 }
 
 .container-fluid .navbar .navbar-right select {
