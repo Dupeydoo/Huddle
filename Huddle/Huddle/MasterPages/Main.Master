@@ -19,6 +19,7 @@
 
         <div class="container-fluid">
             <header>
+                <asp:Image ID="BannerImage" runat="server" ImageUrl="~/Images/smartphone-1445489_1920.jpg" CssClass="banner-image"/>
             </header>
 
             <div class="menu-wrapper">
@@ -30,7 +31,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Huddle</a>
+                            <a class="navbar-brand" href="#">Huddle <i class="fa fa-users"></i></a>
                         </div>
                         <div class="collapse navbar-collapse" id="collapse">
                             <ul class="nav navbar-nav">
@@ -73,3 +74,4 @@
 
 </body>
 </html>
+<!--Images taken from Pixabay: https://pixabay.com-->

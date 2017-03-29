@@ -131,6 +131,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\architect_design.jpg" />
+    <Content Include="Images\smartphone-1445489_1920.jpg" />
     <Content Include="Templates\HuddleTemplate.aspx" />
     <Content Include="MasterPages\Main.Master" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />

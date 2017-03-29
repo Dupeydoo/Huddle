@@ -44,6 +44,12 @@ body a:hover {
     background-color: #0f1724;
 }
 
+.container-fluid .navbar-inverse .navbar-header .navbar-brand {
+    font-size: 22px;
+    padding-right: 20px;
+    color: white;
+}
+
 .container-fluid .navbar-inverse .navbar-nav li a {
     padding-bottom: 18px;
 }
