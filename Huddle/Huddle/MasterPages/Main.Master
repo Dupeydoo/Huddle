@@ -14,6 +14,7 @@
         <asp:ScriptManager ID="MasterScript" runat="server">
             <Scripts>
                 <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Path="~/Scripts/WebForms/WebUIValidation.js" />
             </Scripts>
         </asp:ScriptManager>
 
