@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Huddle.App_Code
+namespace Huddle.Data.Entities
 {
     using System;
     using System.Collections.Generic;

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huddle", "Huddle\Huddle.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huddle.Tests", "Huddle.Tests\Huddle.Tests.csproj", "{D46F9B37-DE39-451B-BB6C-1A53739FAF8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huddle.Data", "Huddle.Data\Huddle.Data.csproj", "{2B3603D6-7E79-49F3-8760-EA8DC5695B1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D46F9B37-DE39-451B-BB6C-1A53739FAF8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D46F9B37-DE39-451B-BB6C-1A53739FAF8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D46F9B37-DE39-451B-BB6C-1A53739FAF8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B3603D6-7E79-49F3-8760-EA8DC5695B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3603D6-7E79-49F3-8760-EA8DC5695B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3603D6-7E79-49F3-8760-EA8DC5695B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3603D6-7E79-49F3-8760-EA8DC5695B1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
