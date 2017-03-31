@@ -23,8 +23,10 @@ namespace Huddle.Controls
         //     int startRowIndex
         //     out int totalRowCount
         //     string sortByExpression
-        public IEnumerable<Category> CategoriesListView_GetData()
+        public IEnumerable<Category> CategoriesListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount,
+                                                                string sortByExpression)
         {
+            totalRowCount = 10;
             return new CategoriesData().GetCategoriesFromDB();
         }
     }
