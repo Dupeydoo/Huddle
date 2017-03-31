@@ -73,6 +73,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -113,6 +115,16 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\HuddleEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HuddleEntities.edmx</DependentUpon>
+      <LastGenOutput>HuddleEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Code\HuddleEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HuddleEntities.edmx</DependentUpon>
+      <LastGenOutput>HuddleEntities.cs</LastGenOutput>
+    </Content>
     <Content Include="App_Themes\Normal\Normal.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -136,6 +148,13 @@
     <Content Include="Images\smartphone-1445489_1920.jpg" />
     <Content Include="Templates\HuddleTemplate.aspx" />
     <Content Include="MasterPages\Main.Master" />
+    <EntityDeploy Include="App_Code\HuddleEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HuddleEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="App_Code\HuddleEntities.edmx.diagram">
+      <DependentUpon>HuddleEntities.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -186,7 +205,31 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Code\BundleConfig.cs" />
+    <Content Include="App_Code\Category.cs">
+      <DependentUpon>HuddleEntities.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\HuddleEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HuddleEntities.Context.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\HuddleEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HuddleEntities.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\HuddleEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HuddleEntities.edmx</DependentUpon>
+    </Content>
+    <Content Include="App_Code\Post.cs">
+      <DependentUpon>HuddleEntities.tt</DependentUpon>
+    </Content>
     <Compile Include="App_Code\RouteConfig.cs" />
+    <Content Include="App_Code\Thread.cs">
+      <DependentUpon>HuddleEntities.tt</DependentUpon>
+    </Content>
     <Compile Include="Controls\Categories.ascx.cs">
       <DependentUpon>Categories.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -220,7 +263,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
