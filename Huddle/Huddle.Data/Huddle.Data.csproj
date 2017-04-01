@@ -83,14 +83,16 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>HuddleEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
+    <Content Include="App.Config" />
     <None Include="Entities\HuddleEntities.edmx.diagram">
       <DependentUpon>HuddleEntities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Entities\HuddleEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -102,9 +104,6 @@
       <DependentUpon>HuddleEntities.edmx</DependentUpon>
       <LastGenOutput>HuddleEntities.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

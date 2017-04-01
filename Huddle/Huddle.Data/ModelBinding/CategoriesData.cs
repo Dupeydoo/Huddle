@@ -15,9 +15,9 @@ namespace Huddle.Data.ModelBinding
         {
             using(HuddleEntities entities = new HuddleEntities())
             {
-                return from categories in entities.Categories
+                return (from categories in entities.Categories
                        orderby categories.Id
-                       select categories;
+                       select categories).ToList();
             }
         }
     }
