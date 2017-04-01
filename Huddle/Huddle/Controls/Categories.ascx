@@ -14,14 +14,20 @@
             <ItemTemplate>
                 <div class="row forum-row">
                     <div class="col-md-12">
-                        <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>'></asp:HyperLink>
+                        <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>'></asp:HyperLink><br />
+                        <div class="category-description">
+                            <asp:Literal ID="CategoryDescription" runat="server" Text='<%# Item.Description %>'></asp:Literal>
+                        </div>
                     </div>
                 </div>
             </ItemTemplate>
             <AlternatingItemTemplate>
                 <div class="row forum-row-alternate">
                     <div class="col-md-12">
-                        <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>'></asp:HyperLink>
+                        <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>'></asp:HyperLink><br />
+                        <div class="category-description">
+                            <asp:Literal ID="CategoryDescription" runat="server" Text='<%# Item.Description %>'></asp:Literal>
+                        </div>
                     </div>
                 </div>
             </AlternatingItemTemplate>

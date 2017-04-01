@@ -102,6 +102,12 @@ body a:hover {
     background-color: #4b73b4;   
 }
 
+.container-fluid #MainContent .forum-row .category-description, .container-fluid #MainContent .forum-row-alternate .category-description {
+    color: #e6e6e6;
+    font-size: 14px;
+    font-weight: 100;
+}
+
 footer {
     background: #293f63; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#4d77bc, #293f63); /* For Safari 5.1 to 6.0 */
