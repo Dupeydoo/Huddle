@@ -14,7 +14,7 @@ namespace Huddle.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         // The return type can be changed to IEnumerable, however to support

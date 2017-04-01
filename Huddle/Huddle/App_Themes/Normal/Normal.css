@@ -76,6 +76,32 @@ body a:hover {
     padding-right: 15px;
 }
 
+.container-fluid #MainContent .forum-wrapper {
+    margin: 0;
+}
+
+.container-fluid #MainContent .forum-inner-wrapper {
+    box-shadow: 2px 2px 5px #0f1724;
+    margin-bottom: 30px;
+}
+
+.container-fluid #MainContent .forum-wrapper .ItemContainer {
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+.container-fluid #MainContent .section-heading {
+    background-color: #76b9d5;
+}
+
+.container-fluid #MainContent .forum-row {
+    background-color: #293f63;   
+}
+
+.container-fluid #MainContent .forum-row-alternate {
+    background-color: #4b73b4;   
+}
+
 footer {
     background: #293f63; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#4d77bc, #293f63); /* For Safari 5.1 to 6.0 */
