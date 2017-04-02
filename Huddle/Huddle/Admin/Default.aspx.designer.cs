@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Huddle.Help {
+namespace Huddle.Admin {
     
     
-    public partial class GeneralHelp {
+    public partial class Default {
     }
 }

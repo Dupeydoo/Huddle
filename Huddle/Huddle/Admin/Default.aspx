@@ -1,4 +1,4 @@
-﻿<%@ Page Title="General Help" Language="C#" MasterPageFile="~/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="GeneralHelp.aspx.cs" Inherits="Huddle.Help.GeneralHelp" %>
+﻿<%@ Page Title="Admin" Language="C#" MasterPageFile="~/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Huddle.Admin.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="server">

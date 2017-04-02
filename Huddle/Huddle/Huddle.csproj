@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\CategoryManagement.aspx" />
+    <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\ForumSettings.aspx" />
     <Content Include="Admin\UserManagement.aspx" />
     <Content Include="App_Themes\Normal\Normal.css" />
@@ -141,8 +142,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Global.asax" />
     <Content Include="Help\AskUs.aspx" />
+    <Content Include="Help\Default.aspx" />
     <Content Include="Help\FAQ.aspx" />
-    <Content Include="Help\GeneralHelp.aspx" />
     <Content Include="Images\ajax-loader.gif" />
     <Content Include="Images\architect_design.jpg" />
     <Content Include="Images\smartphone-1445489_1920.jpg" />
@@ -208,6 +209,13 @@
     <Compile Include="Admin\CategoryManagement.aspx.designer.cs">
       <DependentUpon>CategoryManagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ForumSettings.aspx.cs">
       <DependentUpon>ForumSettings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,19 +259,19 @@
     <Compile Include="Help\AskUs.aspx.designer.cs">
       <DependentUpon>AskUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Help\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Help\FAQ.aspx.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Help\FAQ.aspx.designer.cs">
       <DependentUpon>FAQ.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Help\GeneralHelp.aspx.cs">
-      <DependentUpon>GeneralHelp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Help\GeneralHelp.aspx.designer.cs">
-      <DependentUpon>GeneralHelp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Huddle.Help
+namespace Huddle.Admin
 {
-    public partial class GeneralHelp : BasePage
+    public partial class Default : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
