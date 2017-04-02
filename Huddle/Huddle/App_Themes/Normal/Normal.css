@@ -115,17 +115,18 @@ body a, body a:visited, body a:active {
             font-weight: 100;
         }
 
-    .container-fluid #MainContent .forum-row .category-main {
+    .container-fluid #MainContent .forum-row .category-main, .container-fluid #MainContent .forum-row-alternate .category-main {
         float: left;
         clear: right;
         width: 75%;
     }
 
-    .container-fluid #MainContent .forum-row .forum-categorymodify {
+    .container-fluid #MainContent .forum-row .forum-categorymodify, .container-fluid #MainContent .forum-row-alternate .forum-categorymodify {
         color: #e6e6e6;
         font-size: 12px;
         font-weight: 100;
         float: right;
+        margin-top: 2px;
     }
 
 footer {
