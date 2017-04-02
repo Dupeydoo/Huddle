@@ -15,7 +15,7 @@
                 <div class="row forum-row">
                     <div class="col-md-12">
                         <div class="category-main">
-                            <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>'></asp:HyperLink><br />
+                            <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewCategory?id=" + Item.Id %>'></asp:HyperLink><br />
                             <div class="category-description">
                                 <asp:Literal ID="CategoryDescription" runat="server" Text='<%# Item.Description %>'></asp:Literal>
                             </div>
@@ -35,7 +35,7 @@
                 <div class="row forum-row-alternate">
                     <div class="col-md-12">
                         <div class="category-main">
-                            <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>'></asp:HyperLink><br />
+                            <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewCategory?id=" + Item.Id %>'></asp:HyperLink><br />
                             <div class="category-description">
                                 <asp:Literal ID="CategoryDescription" runat="server" Text='<%# Item.Description %>'></asp:Literal>
                             </div>
