@@ -115,14 +115,13 @@
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Admin\CategoryManagement.aspx" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\ForumSettings.aspx" />
     <Content Include="Admin\UserManagement.aspx" />
+    <Content Include="App_Data\TODO.txt" />
     <Content Include="App_Themes\Normal\Normal.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -152,6 +151,7 @@
     <Content Include="MyAccount\Profile.aspx" />
     <Content Include="MyAccount\Settings.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Scripts\Huddle.js" />
     <Content Include="Templates\HuddleTemplate.aspx" />
     <Content Include="MasterPages\Main.Master" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />

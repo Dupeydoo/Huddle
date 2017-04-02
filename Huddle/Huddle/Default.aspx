@@ -8,4 +8,9 @@
     <Huddle:Categories runat="server" id="Categories" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpClientScript" runat="server">
+    <script>
+        $(document).ready(function () {
+            $('#home').addClass('active');
+        })
+    </script>
 </asp:Content>

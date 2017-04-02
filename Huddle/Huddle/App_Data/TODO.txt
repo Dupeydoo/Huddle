@@ -1,0 +1,3 @@
+﻿Hook category up to viewctaegory.aspx. Need to pass a category id
+In viewcategory on pageload grab the id set the page title, store in class atribute result of query to avoid multipke queries.
+Use id in control method to grab threads belonging to category
