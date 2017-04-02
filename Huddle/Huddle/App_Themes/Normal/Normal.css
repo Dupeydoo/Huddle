@@ -2,7 +2,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
     text-decoration: none;
-    color: white; 
+    color: white;
 }
 
 body a, body a:visited, body a:active {
@@ -10,9 +10,16 @@ body a, body a:visited, body a:active {
     color: white;
 }
 
-body a:hover {
-    text-decoration: none;
-    color: cadetblue;
+    body a:hover {
+        text-decoration: none;
+        color: cadetblue;
+    }
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
 }
 
 .container-fluid {
@@ -20,93 +27,106 @@ body a:hover {
     background-color: #dde9ff;
 }
 
-.container-fluid header {
-    background: #293f63; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#293f63, #4d77bc); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#293f63, #4d77bc); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#293f63, #4d77bc); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#293f63, #4d77bc); /* Standard syntax */
-    min-height: 100px;
-    min-width: 100%;
-    box-shadow: 2px 2px 2px #19263d;
-}
+    .container-fluid header {
+        background: #293f63; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#293f63, #4d77bc); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#293f63, #4d77bc); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#293f63, #4d77bc); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#293f63, #4d77bc); /* Standard syntax */
+        min-height: 100px;
+        min-width: 100%;
+        box-shadow: 2px 2px 2px #19263d;
+    }
 
-.container-fluid .navbar {
-    border-radius: 0;
-    background-color: #1e2e48;
-}
+    .container-fluid .navbar {
+        border-radius: 0;
+        background-color: #1e2e48;
+    }
 
-.container-fluid .navbar-inverse .navbar-toggle {
-    border: 0;
-}
+    .container-fluid .navbar-inverse .navbar-toggle {
+        border: 0;
+    }
 
-.container-fluid .navbar-inverse .navbar-toggle:focus, .container-fluid .navbar-inverse .navbar-toggle:hover {
-    background-color: #0f1724;
-}
+        .container-fluid .navbar-inverse .navbar-toggle:focus, .container-fluid .navbar-inverse .navbar-toggle:hover {
+            background-color: #0f1724;
+        }
 
-.container-fluid .navbar-inverse .navbar-header .navbar-brand {
-    font-size: 22px;
-    padding-right: 20px;
-    color: white;
-}
+    .container-fluid .navbar-inverse .navbar-header .navbar-brand {
+        font-size: 22px;
+        padding-right: 20px;
+        color: white;
+    }
 
-.container-fluid .navbar-inverse .navbar-nav li a {
-    padding-bottom: 18px;
-}
+    .container-fluid .navbar-inverse .navbar-nav li a {
+        padding-bottom: 18px;
+    }
 
-.container-fluid .navbar-inverse .navbar-nav .active a, .container-fluid .navbar-inverse .navbar-nav li a:hover {
-    background-color: #0f1724;
-}
+        .container-fluid .navbar-inverse .navbar-nav .active a, .container-fluid .navbar-inverse .navbar-nav li a:hover {
+            background-color: #0f1724;
+        }
 
-.container-fluid .navbar .navbar-right .lblHeader {
-    margin-right: 5px;
-}
+    .container-fluid .navbar .navbar-right .lblHeader {
+        margin-right: 5px;
+    }
 
-.container-fluid .navbar .navbar-right select {
-    margin-right: 50px;
-}
+    .container-fluid .navbar .navbar-right select {
+        margin-right: 50px;
+    }
 
-.container-fluid .navbar .navbar-right li {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
+    .container-fluid .navbar .navbar-right li {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
-.container-fluid .navbar .navbar-right .addMenuToCollapse {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+    .container-fluid .navbar .navbar-right .addMenuToCollapse {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
-.container-fluid #MainContent .forum-wrapper {
-    margin: 0;
-}
+    .container-fluid #MainContent .forum-wrapper {
+        margin: 0;
+    }
 
-.container-fluid #MainContent .forum-inner-wrapper {
-    box-shadow: 2px 2px 5px #0f1724;
-    margin-bottom: 30px;
-}
+    .container-fluid #MainContent .forum-inner-wrapper {
+        box-shadow: 2px 2px 5px #0f1724;
+        margin-bottom: 30px;
+    }
 
-.container-fluid #MainContent .forum-wrapper .ItemContainer {
-    padding-left: 0px;
-    margin-bottom: 0px;
-}
+    .container-fluid #MainContent .forum-wrapper .ItemContainer {
+        padding-left: 0px;
+        margin-bottom: 0px;
+    }
 
-.container-fluid #MainContent .section-heading {
-    background-color: #76b9d5;
-}
+    .container-fluid #MainContent .section-heading {
+        background-color: #76b9d5;
+    }
 
-.container-fluid #MainContent .forum-row {
-    background-color: #293f63;   
-}
+    .container-fluid #MainContent .forum-row {
+        background-color: #293f63;
+    }
 
-.container-fluid #MainContent .forum-row-alternate {
-    background-color: #4b73b4;   
-}
+    .container-fluid #MainContent .forum-row-alternate {
+        background-color: #4b73b4;
+    }
 
-.container-fluid #MainContent .forum-row .category-description, .container-fluid #MainContent .forum-row-alternate .category-description {
-    color: #e6e6e6;
-    font-size: 14px;
-    font-weight: 100;
-}
+        .container-fluid #MainContent .forum-row .category-description, .container-fluid #MainContent .forum-row-alternate .category-description {
+            color: #e6e6e6;
+            font-size: 14px;
+            font-weight: 100;
+        }
+
+    .container-fluid #MainContent .forum-row .category-main {
+        float: left;
+        clear: right;
+        width: 75%;
+    }
+
+    .container-fluid #MainContent .forum-row .forum-categorymodify {
+        color: #e6e6e6;
+        font-size: 12px;
+        font-weight: 100;
+        float: right;
+    }
 
 footer {
     background: #293f63; /* For browsers that do not support gradients */
@@ -118,5 +138,3 @@ footer {
     min-width: 100%;
     border-top: 2px solid black;
 }
-
-

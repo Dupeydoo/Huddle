@@ -14,9 +14,19 @@
             <ItemTemplate>
                 <div class="row forum-row">
                     <div class="col-md-12">
-                        <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>'></asp:HyperLink><br />
-                        <div class="category-description">
-                            <asp:Literal ID="CategoryDescription" runat="server" Text='<%# Item.Description %>'></asp:Literal>
+                        <div class="category-main">
+                            <asp:HyperLink ID="CategoryTitle" runat="server" Text='<%# Item.Title %>'></asp:HyperLink><br />
+                            <div class="category-description">
+                                <asp:Literal ID="CategoryDescription" runat="server" Text='<%# Item.Description %>'></asp:Literal>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="forum-categorymodify">
+                                Last Post:
+                                <asp:Literal ID="ModifiedBy" Text='<%# Item.ModifiedBy %>' runat="server" /><br />
+                                At:
+                                <asp:Literal ID="ModifiedDate" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>' runat="server" />
+                            </div>
                         </div>
                     </div>
                 </div>
