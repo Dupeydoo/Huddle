@@ -20,5 +20,15 @@ namespace Huddle.Data.ModelBinding
                        select categories).ToList();
             }
         }
+
+        public string GetCategoryTitleFromDB(int id)
+        {
+            using (HuddleEntities entities = new HuddleEntities())
+            {
+                return (from categories in entities.Categories
+                        where categories.Id == id
+                        select categories.Title).SingleOrDefault(); 
+            }
+        }
     }
 }
