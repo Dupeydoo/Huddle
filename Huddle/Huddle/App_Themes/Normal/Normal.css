@@ -1,4 +1,10 @@
-﻿* {
+﻿/*******************************************
+
+    General Styles
+
+*******************************************/
+
+* {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
     text-decoration: none;
@@ -21,6 +27,12 @@ body a, body a:visited, body a:active {
     height: 0;
     clear: both;
 }
+
+/*******************************************
+
+    MasterPage
+
+*******************************************/
 
 .container-fluid {
     padding: 0 !important;
@@ -83,37 +95,54 @@ body a, body a:visited, body a:active {
         padding-right: 15px;
     }
 
-    .container-fluid #MainContent .forum-wrapper {
-        margin: 0;
-    }
+footer {
+    background: #293f63; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#4d77bc, #293f63); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4d77bc, #293f63); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4d77bc, #293f63); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4d77bc, #293f63); /* Standard syntax */
+    min-height: 100px;
+    min-width: 100%;
+    border-top: 2px solid black;
+}
 
-    .container-fluid #MainContent .forum-inner-wrapper {
-        box-shadow: 2px 2px 5px #0f1724;
-        margin-bottom: 30px;
-    }
+/*******************************************
 
-    .container-fluid #MainContent .forum-wrapper .ItemContainer {
-        padding-left: 0px;
-        margin-bottom: 0px;
-    }
+    Forum Category screen
 
-    .container-fluid #MainContent .section-heading {
-        background-color: #76b9d5;
-    }
+*******************************************/
 
-    .container-fluid #MainContent .forum-row {
-        background-color: #293f63;
-    }
+.container-fluid #MainContent .forum-wrapper {
+    margin: 0;
+}
 
-    .container-fluid #MainContent .forum-row-alternate {
-        background-color: #4b73b4;
-    }
+.container-fluid #MainContent .forum-inner-wrapper {
+    box-shadow: 2px 2px 5px #0f1724;
+    margin-bottom: 30px;
+}
 
-        .container-fluid #MainContent .forum-row .category-description, .container-fluid #MainContent .forum-row-alternate .category-description {
-            color: #e6e6e6;
-            font-size: 14px;
-            font-weight: 100;
-        }
+.container-fluid #MainContent .forum-wrapper .ItemContainer {
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+.container-fluid #MainContent .section-heading {
+    background-color: #76b9d5;
+}
+
+.container-fluid #MainContent .forum-row {
+    background-color: #293f63;
+}
+
+.container-fluid #MainContent .forum-row-alternate {
+    background-color: #4b73b4;
+}
+
+    .container-fluid #MainContent .forum-row .category-description, .container-fluid #MainContent .forum-row-alternate .category-description {
+        color: #e6e6e6;
+        font-size: 14px;
+        font-weight: 100;
+    }
 
     .container-fluid #MainContent .forum-row .category-main, .container-fluid #MainContent .forum-row-alternate .category-main {
         float: left;
@@ -129,13 +158,25 @@ body a, body a:visited, body a:active {
         margin-top: 2px;
     }
 
-footer {
-    background: #293f63; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#4d77bc, #293f63); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#4d77bc, #293f63); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#4d77bc, #293f63); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#4d77bc, #293f63); /* Standard syntax */
-    min-height: 100px;
-    min-width: 100%;
-    border-top: 2px solid black;
+/*******************************************
+
+    Forum Error
+
+*******************************************/
+
+.container-fluid .forum-error {
+    margin: 0 auto;
+    background-color: #1e2e48;
+    max-width: 500px;
+    padding: 0px 10px 10px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    box-shadow: 2px 2px 5px #0f1724;
 }
+
+.container-fluid .forum-error .error-heading {
+    background-color: #76b9d5;
+    padding-left: 3px;
+}
+
+
