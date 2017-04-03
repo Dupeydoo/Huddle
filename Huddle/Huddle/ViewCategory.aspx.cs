@@ -14,26 +14,34 @@ namespace Huddle
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+            if(Request.QueryString["id"] != null)
             {
-                int id = Convert.ToInt32(Request.QueryString["id"]);
-                Page.Title = this.GetCategoryTitle(id);
+                try {
+                    int id = Convert.ToInt32(Request.QueryString["id"]);
+                    Page.Title = this.GetCategoryTitle(id);
+                }
+
+                catch(System.FormatException)
+                {
+                    SetDefaultOnError();
+                }
             }
 
-            catch(System.FormatException)
+            else
             {
-                //render warning
-            }
-
-            finally
-            {
-                Page.Title = "View Category";
-            }
+                SetDefaultOnError();
+            }             
         }
 
         private string GetCategoryTitle(int id)
         {
             return new CategoriesData().GetCategoryTitleFromDB(id);
+        }
+
+        private void SetDefaultOnError()
+        {
+            Page.Title = "View Category";
+            ErrorPanel.Visible = true;
         }
 
     }
