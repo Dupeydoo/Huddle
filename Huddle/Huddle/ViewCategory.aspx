@@ -9,7 +9,7 @@
         </div>
         <div class="error-body">
             Invalid category, contact an administrator if you think this is
-            a valid link.
+            a valid link. Go <a href="/">home...</a>
         </div>
     </asp:Panel>
 </asp:Content>
