@@ -43,15 +43,38 @@
                                     <a href="/MyAccount">My Account</a>
                                     <div class="hover-content">
                                         <p>
-                                            <a href="/MyAccount/Profile.aspx">My Profile</a>
+                                            <a href="/MyAccount/Profile">My Profile</a>
                                         </p>
                                         <p>
-                                            <a href="/MyAccount/Settings.aspx">Account Settings</a>
+                                            <a href="/MyAccount/Settings">Account Settings</a>
                                         </p>
                                     </div>
                                 </li>
-                                <li id="help"><a href="/Help">Help</a></li>
-                                <li id="admin"><a href="/Admin">Admin</a></li>
+                                <li id="help" class="hover-wrapper">
+                                    <a href="/Help">Help</a>
+                                    <div class="hover-content">
+                                        <p>
+                                            <a href="/Help/AskUs">Ask us something</a>
+                                        </p>
+                                        <p>
+                                            <a href="/Help/FAQ">Frequently asked questions</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li id="admin" class="hover-wrapper">
+                                    <a href="/Admin">Admin</a>
+                                    <div class="hover-content">
+                                        <p>
+                                            <a href="/Admin/CategoryManagement">Manage Categories</a>
+                                        </p>
+                                        <p>
+                                            <a href="/Admin/ForumSettings">Forum Settings</a>
+                                        </p>
+                                        <p>
+                                            <a href="/Admin/UserManagement">User Management</a>
+                                        </p>
+                                    </div>
+                                </li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="addMenuToCollapse">
