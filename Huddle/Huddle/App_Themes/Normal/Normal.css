@@ -28,6 +28,10 @@ body a, body a:visited, body a:active {
     clear: both;
 }
 
+.submenu-parent {
+    background-color: #0f1724;
+}
+
 /*******************************************
 
     MasterPage
@@ -76,6 +80,23 @@ body a, body a:visited, body a:active {
         .container-fluid .navbar-inverse .navbar-nav .active a, .container-fluid .navbar-inverse .navbar-nav li a:hover {
             background-color: #0f1724;
         }
+
+    .container-fluid .navbar-inverse .navbar-nav .hover-wrapper .hover-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        background-color: #0f1724;
+        box-shadow: 2px 2px 3px #0f1724;
+        z-index: 1;
+    }
+
+    .container-fluid .navbar-inverse .navbar-nav .hover-wrapper .hover-content p {
+        padding: 10px 10px 10px;
+    }
+
+    .container-fluid .navbar-inverse .navbar-nav .hover-wrapper:hover .hover-content {
+        display: block;
+    }
 
     .container-fluid .navbar .navbar-right .lblHeader {
         margin-right: 5px;

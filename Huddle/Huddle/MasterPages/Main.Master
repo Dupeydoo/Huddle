@@ -20,7 +20,7 @@
 
         <div class="container-fluid">
             <header>
-                <asp:Image ID="BannerImage" runat="server" ImageUrl="~/Images/smartphone-1445489_1920.jpg" CssClass="banner-image"/>
+                <asp:Image ID="BannerImage" runat="server" ImageUrl="~/Images/smartphone-1445489_1920.jpg" CssClass="banner-image" />
             </header>
 
             <div class="menu-wrapper">
@@ -39,7 +39,17 @@
                                 <li id="home"><a href="/">Home</a></li>
                                 <li id="login"><a href="/Login">Login</a></li>
                                 <li id="register"><a href="/Register">Register</a></li>
-                                <li id="myaccount"><a href="/MyAccount">My Account</a></li>
+                                <li id="myaccount" class="hover-wrapper">
+                                    <a href="/MyAccount">My Account</a>
+                                    <div class="hover-content">
+                                        <p>
+                                            <a href="/MyAccount/Profile.aspx">My Profile</a>
+                                        </p>
+                                        <p>
+                                            <a href="/MyAccount/Settings.aspx">Account Settings</a>
+                                        </p>
+                                    </div>
+                                </li>
                                 <li id="help"><a href="/Help">Help</a></li>
                                 <li id="admin"><a href="/Admin">Admin</a></li>
                             </ul>
@@ -69,6 +79,7 @@
         <footer>This is a footer</footer>
     </form>
 
+    <script src="../Scripts/Huddle.js"></script>
     <link rel="stylesheet" type="text/css" href="../Content/bootstrap.min.css" />
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/f828c052e9.js"></script>
