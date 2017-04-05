@@ -84,8 +84,8 @@ body a, body a:visited, body a:active {
     .container-fluid .navbar-inverse .navbar-nav .hover-wrapper .hover-content {
         display: none;
         position: absolute;
-        min-width: 160px;
         background-color: #0f1724;
+        min-width: 160px;
         box-shadow: 2px 2px 3px #0f1724;
         z-index: 1;
     }
@@ -96,6 +96,10 @@ body a, body a:visited, body a:active {
 
     .container-fluid .navbar-inverse .navbar-nav .hover-wrapper:hover .hover-content {
         display: block;
+    }
+
+    .container-fluid .navbar-inverse .navbar-nav .hover-wrapper:hover a {
+        background-color: #0f1724;
     }
 
     .container-fluid .navbar .navbar-right .lblHeader {
