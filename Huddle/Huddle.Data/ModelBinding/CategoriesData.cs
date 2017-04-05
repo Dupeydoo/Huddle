@@ -30,5 +30,27 @@ namespace Huddle.Data.ModelBinding
                         select categories.Title).SingleOrDefault(); 
             }
         }
+
+        public IQueryable<Thread> GetCategoryThreadsFromDB(int id)
+        {
+            using(HuddleEntities entities = new HuddleEntities())
+            {
+                return (from threads in entities.Threads
+                        where threads.CategoryId == id
+                        orderby threads.DateModified descending
+                        select threads);
+            }
+        }
+
+        public IQueryable<Thread> GetCategoryThreadsFromDB(int id, bool isSticky)
+        {
+            IQueryable<Thread> threads = GetCategoryThreadsFromDB(id);
+
+            if (isSticky)
+            {
+                return threads.Where(thread => thread.IsSticky == true);
+            }
+            return threads.Where(thread => thread.IsSticky == false);
+        }
     }
 }
