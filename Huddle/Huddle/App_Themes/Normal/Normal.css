@@ -185,6 +185,7 @@ footer {
         font-weight: 100;
         float: right;
         margin-top: 2px;
+        min-width: 200px;
     }
 
 /*******************************************
