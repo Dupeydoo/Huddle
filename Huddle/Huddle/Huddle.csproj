@@ -354,6 +354,10 @@
       <Project>{2b3603d6-7e79-49f3-8760-ea8dc5695b1f}</Project>
       <Name>Huddle.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Huddle.Objects\Huddle.Objects.csproj">
+      <Project>{4748b99e-d03b-4585-941d-65d841976cad}</Project>
+      <Name>Huddle.Objects</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Huddle.Data.Entities;
+using ObjectCat = Huddle.Objects.Category;
 
 namespace Huddle.Data.ModelBinding
 {
@@ -11,14 +9,34 @@ namespace Huddle.Data.ModelBinding
     {
         public CategoriesData() { }
 
-        public IEnumerable<Category> GetCategoriesFromDB()
+        public IEnumerable<ObjectCat> GetCategoriesFromDB()
         {
+            List<Category> categorySelect = new List<Category>();
+            List<ObjectCat> output = new List<ObjectCat>();
             using(HuddleEntities entities = new HuddleEntities())
             {
-                return (from categories in entities.Categories
+                categorySelect =
+                       (from categories in entities.Categories
                        orderby categories.Id
                        select categories).ToList();
             }
+
+            for(int c = 0; c < categorySelect.Count; c++)
+            {
+                Category category = categorySelect[c];
+                output.Add(new ObjectCat
+                {
+                    Id = category.Id,
+                    CreatedBy = category.CreatedBy,
+                    DateCreated = category.DateCreated,
+                    DateModified = category.DateModified,
+                    Description = category.Description,
+                    ModifiedBy = category.ModifiedBy,
+                    Title = category.Title
+                });
+            }
+
+            return output;
         }
 
         public string GetCategoryTitleFromDB(int id)

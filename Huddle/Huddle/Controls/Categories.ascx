@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <asp:ListView ID="CategoriesListView" runat="server" SelectMethod="CategoriesListView_GetData" ItemType="Huddle.Data.Entities.Category">
+        <asp:ListView ID="CategoriesListView" runat="server" SelectMethod="CategoriesListView_GetData" ItemType="Huddle.Objects.Category">
             <ItemTemplate>
                 <div class="row forum-row">
                     <div class="col-md-12">

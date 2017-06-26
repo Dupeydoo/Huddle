@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Huddle.Objects
 {
-    class Category
+    public class Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()

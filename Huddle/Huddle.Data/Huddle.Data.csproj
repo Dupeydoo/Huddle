@@ -92,7 +92,12 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Huddle.Objects\Huddle.Objects.csproj">
+      <Project>{4748b99e-d03b-4585-941d-65d841976cad}</Project>
+      <Name>Huddle.Objects</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Entities\HuddleEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

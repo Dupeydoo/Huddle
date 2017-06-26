@@ -5,8 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Threading;
-using Huddle.Data.Entities;
 using Huddle.Data.ModelBinding;
+using Huddle.Objects;
 
 namespace Huddle.Controls
 {

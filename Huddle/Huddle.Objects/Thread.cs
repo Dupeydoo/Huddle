@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Huddle.Objects
 {
-    class Thread
+    public class Thread
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Thread()

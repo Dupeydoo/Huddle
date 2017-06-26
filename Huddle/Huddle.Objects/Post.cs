@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Huddle.Objects
 {
-    class Post
+    public class Post
     {
         public int Id { get; set; }
         public int ThreadId { get; set; }
