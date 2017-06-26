@@ -99,6 +99,7 @@
       <DependentUpon>HuddleEntities.edmx</DependentUpon>
       <LastGenOutput>HuddleEntities.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Entities\HuddleEntities.edmx.sql" />
     <Content Include="Entities\HuddleEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HuddleEntities.edmx</DependentUpon>

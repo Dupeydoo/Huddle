@@ -54,6 +54,10 @@ body a, body a:visited, body a:active {
         box-shadow: 2px 2px 2px #19263d;
     }
 
+    .container-fluid .banner-image {
+        width: 100%;
+    }
+
     .container-fluid .navbar {
         border-radius: 0;
         background-color: #1e2e48;
