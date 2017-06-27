@@ -23,22 +23,7 @@ namespace Huddle.Data.ModelBinding
             }
 
             // Parse the categories into non-ef wrapped objects
-            for(int c = 0; c < categorySelect.Count; c++)
-            {
-                Category category = categorySelect[c];
-                output.Add(
-                    new ObjectCat
-                    {
-                        Id = category.Id,
-                        CreatedBy = category.CreatedBy,
-                        DateCreated = category.DateCreated,
-                        DateModified = category.DateModified,
-                        Description = category.Description,
-                        ModifiedBy = category.ModifiedBy,
-                        Title = category.Title
-                    }
-                );
-            }
+            this.ParseCategorySelect(categorySelect, output);
 
             return output;
         }
@@ -53,26 +38,24 @@ namespace Huddle.Data.ModelBinding
             }
         }
 
-        public IQueryable<Thread> GetCategoryThreadsFromDB(int id)
+        private void ParseCategorySelect(List<Category> categories, List<ObjectCat> output)
         {
-            using(HuddleEntities entities = new HuddleEntities())
+            for (int c = 0; c < categories.Count; c++)
             {
-                return (from threads in entities.Threads
-                        where threads.CategoryId == id
-                        orderby threads.DateModified descending
-                        select threads);
+                Category category = categories[c];
+                output.Add(
+                    new ObjectCat
+                    {
+                        Id = category.Id,
+                        CreatedBy = category.CreatedBy,
+                        DateCreated = category.DateCreated,
+                        DateModified = category.DateModified,
+                        Description = category.Description,
+                        ModifiedBy = category.ModifiedBy,
+                        Title = category.Title
+                    }
+                );
             }
-        }
-
-        public IQueryable<Thread> GetCategoryThreadsFromDB(int id, bool isSticky)
-        {
-            IQueryable<Thread> threads = GetCategoryThreadsFromDB(id);
-
-            if (isSticky)
-            {
-                return threads.Where(thread => thread.IsSticky == true);
-            }
-            return threads.Where(thread => thread.IsSticky == false);
         }
     }
 }

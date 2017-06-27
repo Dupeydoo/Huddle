@@ -10,7 +10,7 @@
             </div>
         </div>
         <!-- Gross! -->
-        <asp:ListView ID="StickyListView" runat="server">
+        <asp:ListView ID="StickyListView" runat="server" SelectMethod="StickyListView_GetData" ItemType="Huddle.Objects.Thread">
             <ItemTemplate>
                 <div class="row forum-row">
                     <div class="col-md-12"></div>
@@ -27,7 +27,7 @@
                 </ul>
             </LayoutTemplate>
         </asp:ListView>
-        <asp:ListView ID="ThreadListView" runat="server">
+        <asp:ListView ID="ThreadListView" runat="server" SelectMethod="ThreadListView_GetData" ItemType="Huddle.Objects.Thread">
             <ItemTemplate>
                 <div class="row forum-row">
                     <div class="col-md-12"></div>

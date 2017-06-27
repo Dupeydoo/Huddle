@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Huddle.Data.ModelBinding;
+using Huddle.Objects;
 
 namespace Huddle.Controls
 {
@@ -14,6 +16,28 @@ namespace Huddle.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             SectionHeading.Text = Page.Title;
+        }
+
+        // The return type can be changed to IEnumerable, however to support
+        // paging and sorting, the following parameters must be added:
+        //     int maximumRows
+        //     int startRowIndex
+        //     out int totalRowCount
+        //     string sortByExpression
+        public IQueryable StickyListView_GetData()
+        {
+            return null;
+        }
+
+        // The return type can be changed to IEnumerable, however to support
+        // paging and sorting, the following parameters must be added:
+        //     int maximumRows
+        //     int startRowIndex
+        //     out int totalRowCount
+        //     string sortByExpression
+        public IQueryable ThreadListView_GetData()
+        {
+            return null;
         }
     }
 }
