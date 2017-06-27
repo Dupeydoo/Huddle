@@ -10,10 +10,41 @@
             </div>
         </div>
         <!-- Gross! -->
-        <asp:ListView ID="StickyListView" runat="server"></asp:ListView>
+        <asp:ListView ID="StickyListView" runat="server">
+            <ItemTemplate>
+                <div class="row forum-row">
+                    <div class="col-md-12"></div>
+                </div>
+            </ItemTemplate>
+            <AlternatingItemTemplate>
+                <div class="row forum-row-alternate">
+                    <div class="col-md-12"></div>
+                </div>
+            </AlternatingItemTemplate>
+            <LayoutTemplate>
+                <ul class="ItemContainer">
+                    <li runat="server" id="itemPlaceholder"></li>
+                </ul>
+            </LayoutTemplate>
+        </asp:ListView>
+        <asp:ListView ID="ThreadListView" runat="server">
+            <ItemTemplate>
+                <div class="row forum-row">
+                    <div class="col-md-12"></div>
+                </div>
+            </ItemTemplate>
+            <AlternatingItemTemplate>
+                <div class="row forum-row-alternate">
+                    <div class="col-md-12"></div>
+                </div>
+            </AlternatingItemTemplate>
+            <LayoutTemplate>
+                <ul class="ItemContainer">
+                    <li runat="server" id="itemPlaceholder"></li>
+                </ul>
+            </LayoutTemplate>
+        </asp:ListView>
     </div>
-    <div id="nonsticky-wrapper">
-        <asp:ListView ID="ThreadListView" runat="server"></asp:ListView>
-    </div>
+    <div class="col-md-2"></div>
 </div>
 
