@@ -13,7 +13,9 @@
         <asp:ListView ID="StickyListView" runat="server" SelectMethod="StickyListView_GetData" ItemType="Huddle.Objects.Thread">
             <ItemTemplate>
                 <div class="row forum-row">
-                    <div class="col-md-12"></div>
+                    <div class="col-md-12">
+                        <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                    </div>
                 </div>
             </ItemTemplate>
             <AlternatingItemTemplate>

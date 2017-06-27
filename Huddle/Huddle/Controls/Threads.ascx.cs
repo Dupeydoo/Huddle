@@ -26,7 +26,7 @@ namespace Huddle.Controls
         //     string sortByExpression
         public IQueryable StickyListView_GetData()
         {
-            return null;
+            return new ThreadsData().GetCategoryThreadsFromDB(CategoryId, true);
         }
 
         // The return type can be changed to IEnumerable, however to support
@@ -37,7 +37,7 @@ namespace Huddle.Controls
         //     string sortByExpression
         public IQueryable ThreadListView_GetData()
         {
-            return null;
+            return new ThreadsData().GetCategoryThreadsFromDB(CategoryId, false);
         }
     }
 }
