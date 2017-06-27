@@ -13,6 +13,15 @@ namespace Huddle.Controls {
     public partial class Threads {
         
         /// <summary>
+        /// SectionHeading control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal SectionHeading;
+        
+        /// <summary>
         /// StickyListView control.
         /// </summary>
         /// <remarks>
