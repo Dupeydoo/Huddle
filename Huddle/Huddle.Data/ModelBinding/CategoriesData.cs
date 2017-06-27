@@ -13,6 +13,7 @@ namespace Huddle.Data.ModelBinding
         {
             List<Category> categorySelect = new List<Category>();
             List<ObjectCat> output = new List<ObjectCat>();
+
             using(HuddleEntities entities = new HuddleEntities())
             {
                 categorySelect =
@@ -21,19 +22,22 @@ namespace Huddle.Data.ModelBinding
                        select categories).ToList();
             }
 
+            // Parse the categories into non-ef wrapped objects
             for(int c = 0; c < categorySelect.Count; c++)
             {
                 Category category = categorySelect[c];
-                output.Add(new ObjectCat
-                {
-                    Id = category.Id,
-                    CreatedBy = category.CreatedBy,
-                    DateCreated = category.DateCreated,
-                    DateModified = category.DateModified,
-                    Description = category.Description,
-                    ModifiedBy = category.ModifiedBy,
-                    Title = category.Title
-                });
+                output.Add(
+                    new ObjectCat
+                    {
+                        Id = category.Id,
+                        CreatedBy = category.CreatedBy,
+                        DateCreated = category.DateCreated,
+                        DateModified = category.DateModified,
+                        Description = category.Description,
+                        ModifiedBy = category.ModifiedBy,
+                        Title = category.Title
+                    }
+                );
             }
 
             return output;

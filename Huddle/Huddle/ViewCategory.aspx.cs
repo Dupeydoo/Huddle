@@ -19,6 +19,7 @@ namespace Huddle
                 try {
                     int id = Convert.ToInt32(Request.QueryString["id"]);
                     Page.Title = this.GetCategoryTitle(id);
+                    Threads.CategoryId = id;
                 }
 
                 catch(System.FormatException)

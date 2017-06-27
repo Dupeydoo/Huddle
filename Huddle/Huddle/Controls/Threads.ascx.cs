@@ -9,6 +9,8 @@ namespace Huddle.Controls
 {
     public partial class Threads : System.Web.UI.UserControl
     {
+        public int CategoryId { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

@@ -16,7 +16,7 @@
         </div>
     </asp:Panel>
     <asp:Panel ID="ThreadsPanel" runat="server" Visible="true">
-        <Huddle:Threads runat="server" id="Threads" />
+        <Huddle:Threads runat="server" id="Threads"/>
     </asp:Panel>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpClientScript" runat="server">
