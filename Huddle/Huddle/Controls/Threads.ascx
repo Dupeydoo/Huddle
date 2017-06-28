@@ -20,10 +20,17 @@
                 <div class="row forum-row">
                     <div class="col-md-12">
                         <div class="thread-main">
-                            <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                            <asp:HyperLink ID="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
                             <div class="thread-description">
-                                <asp:Literal id="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy %>'></asp:Literal>
+                                <asp:Literal ID="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy + " " + Item.DateCreated.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </div>
+                        </div>
+                        <div class="thread-modified">
+                            <p>
+                                <asp:Literal runat="server" ID="LastPost" Text='<%# "Last Post By: " + Item.ModifiedBy %>'></asp:Literal>
+                                <br />
+                                <asp:Literal runat="server" ID="LastPostDate" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -32,10 +39,17 @@
                 <div class="row forum-row-alternate">
                     <div class="col-md-12">
                         <div class="thread-main">
-                            <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                            <asp:HyperLink ID="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
                             <div class="thread-description">
-                                <asp:Literal id="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy %>'></asp:Literal>
+                                <asp:Literal ID="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy + " " + Item.DateCreated.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </div>
+                        </div>
+                        <div class="thread-modified">
+                            <p>
+                                <asp:Literal runat="server" ID="LastPost" Text='<%# "Last Post By: " + Item.ModifiedBy %>'></asp:Literal>
+                                <br />
+                                <asp:Literal runat="server" ID="LastPostDate" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -56,10 +70,17 @@
                 <div class="row forum-row">
                     <div class="col-md-12">
                         <div class="thread-main">
-                            <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                            <asp:HyperLink ID="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
                             <div class="thread-description">
-                                <asp:Literal id="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy %>'></asp:Literal>
+                                <asp:Literal ID="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy + " " + Item.DateCreated.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </div>
+                        </div>
+                        <div class="thread-modified">
+                            <p>
+                                <asp:Literal runat="server" ID="LastPost" Text='<%# "Last Post By: " + Item.ModifiedBy %>'></asp:Literal>
+                                <br />
+                                <asp:Literal runat="server" ID="LastPostDate" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -68,10 +89,17 @@
                 <div class="row forum-row-alternate">
                     <div class="col-md-12">
                         <div class="thread-main">
-                            <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                            <asp:HyperLink ID="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
                             <div class="thread-description">
-                                <asp:Literal id="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy %>'></asp:Literal>
+                                <asp:Literal ID="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy + " " + Item.DateCreated.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </div>
+                        </div>
+                        <div class="thread-modified">
+                            <p>
+                                <asp:Literal runat="server" ID="LastPost" Text='<%# "Last Post By: " + Item.ModifiedBy %>'></asp:Literal>
+                                <br />
+                                <asp:Literal runat="server" ID="LastPostDate" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
+                            </p>
                         </div>
                     </div>
                 </div>
