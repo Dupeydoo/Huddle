@@ -198,8 +198,13 @@ footer {
 
     .container-fluid #MainContent .forum-row .thread-modified, .container-fluid #MainContent .forum-row-alternate .thread-modified {
         float: right;
-        clear: right;
         width: 25%;
+        height: 100%;
+    }
+
+    .container-fluid #MainContent .forum-row .thread-popularity, .container-fluid #MainContent .forum-row-alternate .thread-popularity {
+        float: right;
+        width: 15%;
         height: 100%;
     }
 
@@ -207,7 +212,8 @@ footer {
     background-color: #4b73b4;
 }
 
-    .container-fluid #MainContent .forum-row .thread-modified p, .container-fluid #MainContent .forum-row-alternate .thread-modified p {
+    .container-fluid #MainContent .forum-row .thread-modified p, .container-fluid #MainContent .forum-row-alternate .thread-modified p,
+    .container-fluid #MainContent .forum-row .thread-popularity p, .container-fluid #MainContent .forum-row-alternate .thread-popularity p {
         font-size: 14px;
         margin: 5px;
         padding-bottom: 9px;

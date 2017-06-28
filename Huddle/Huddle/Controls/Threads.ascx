@@ -32,6 +32,13 @@
                                 <asp:Literal runat="server" ID="LastPostDate" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </p>
                         </div>
+                        <div class="thread-popularity">
+                            <p>
+                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: 5" %>'></asp:Literal>
+                                <br />
+                                <asp:Literal runat="server" ID="ThreadViews" Text='<%# "Views: " + Item.Views %>'></asp:Literal>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </ItemTemplate>
@@ -49,6 +56,13 @@
                                 <asp:Literal runat="server" ID="LastPost" Text='<%# "Last Post By: " + Item.ModifiedBy %>'></asp:Literal>
                                 <br />
                                 <asp:Literal runat="server" ID="LastPostDate" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
+                            </p>
+                        </div>
+                        <div class="thread-popularity">
+                            <p>
+                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: 5" %>'></asp:Literal>
+                                <br />
+                                <asp:Literal runat="server" ID="ThreadViews" Text='<%# "Views: " + Item.Views %>'></asp:Literal>
                             </p>
                         </div>
                     </div>
@@ -82,6 +96,13 @@
                                 <asp:Literal runat="server" ID="LastPostDate" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </p>
                         </div>
+                        <div class="thread-popularity">
+                            <p>
+                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: 5" %>'></asp:Literal>
+                                <br />
+                                <asp:Literal runat="server" ID="ThreadViews" Text='<%# "Views: " + Item.Views %>'></asp:Literal>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </ItemTemplate>
@@ -99,6 +120,13 @@
                                 <asp:Literal runat="server" ID="LastPost" Text='<%# "Last Post By: " + Item.ModifiedBy %>'></asp:Literal>
                                 <br />
                                 <asp:Literal runat="server" ID="LastPostDate" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
+                            </p>
+                        </div>
+                        <div class="thread-popularity">
+                            <p>
+                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: 5" %>'></asp:Literal>
+                                <br />
+                                <asp:Literal runat="server" ID="ThreadViews" Text='<%# "Views: " + Item.Views %>'></asp:Literal>
                             </p>
                         </div>
                     </div>
