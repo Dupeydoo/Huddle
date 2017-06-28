@@ -9,6 +9,11 @@
                 <asp:Literal ID="SectionHeading" runat="server"></asp:Literal>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12 sub-section-heading">
+                <h1>Sticky Threads</h1>
+            </div>
+        </div>
         <!-- Gross! -->
         <asp:ListView ID="StickyListView" runat="server" SelectMethod="StickyListView_GetData" ItemType="Huddle.Objects.Thread">
             <ItemTemplate>
@@ -41,15 +46,34 @@
                 </ul>
             </LayoutTemplate>
         </asp:ListView>
+        <div class="row">
+            <div class="col-md-12 sub-section-heading">
+                <h1>Normal Threads</h1>
+            </div>
+        </div>
         <asp:ListView ID="ThreadListView" runat="server" SelectMethod="ThreadListView_GetData" ItemType="Huddle.Objects.Thread">
             <ItemTemplate>
                 <div class="row forum-row">
-                    <div class="col-md-12"></div>
+                    <div class="col-md-12">
+                        <div class="thread-main">
+                            <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                            <div class="thread-description">
+                                <asp:Literal id="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy %>'></asp:Literal>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </ItemTemplate>
             <AlternatingItemTemplate>
                 <div class="row forum-row-alternate">
-                    <div class="col-md-12"></div>
+                    <div class="col-md-12">
+                        <div class="thread-main">
+                            <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                            <div class="thread-description">
+                                <asp:Literal id="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy %>'></asp:Literal>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </AlternatingItemTemplate>
             <LayoutTemplate>

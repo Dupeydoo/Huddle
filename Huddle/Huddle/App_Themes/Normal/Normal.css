@@ -159,6 +159,16 @@ footer {
     background-color: #76b9d5;
 }
 
+.container-fluid #MainContent .sub-section-heading {
+    background-color: #8ac3db;
+}
+
+    .container-fluid #MainContent .sub-section-heading h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
 .container-fluid #MainContent .forum-row {
     background-color: #293f63;
 }

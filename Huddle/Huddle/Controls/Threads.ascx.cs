@@ -18,27 +18,13 @@ namespace Huddle.Controls
             SectionHeading.Text = Page.Title;
         }
 
-        // The return type can be changed to IEnumerable, however to support
-        // paging and sorting, the following parameters must be added:
-        //     int maximumRows
-        //     int startRowIndex
-        //     out int totalRowCount
-        //     string sortByExpression
-        public IEnumerable<Thread> StickyListView_GetData(int maximumRows, int startRowIndex, 
-            out int totalRowCount, string sortByExpression)
+        public IEnumerable<Thread> StickyListView_GetData()
         {
-            totalRowCount = 10;
             return new ThreadsData().GetCategoryThreadsFromDB(CategoryId, true);
         }
 
-        // The return type can be changed to IEnumerable, however to support
-        // paging and sorting, the following parameters must be added:
-        //     int maximumRows
-        //     int startRowIndex
-        //     out int totalRowCount
-        //     string sortByExpression
-        public IEnumerable<Thread> ThreadListView_GetData(int maximumRows, int startRowIndex,
-            out int totalRowCount, string sortByExpression)
+        public IEnumerable<Thread> ThreadListView_GetData(int? maximumRows, int? startRowIndex, out int totalRowCount, 
+            string sortByExpression)
         {
             totalRowCount = 10;
             return new ThreadsData().GetCategoryThreadsFromDB(CategoryId, false);

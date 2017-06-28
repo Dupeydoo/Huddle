@@ -18,12 +18,6 @@ namespace Huddle.Controls
             
         }
 
-        // The return type can be changed to IEnumerable, however to support
-        // paging and sorting, the following parameters must be added:
-        //     int maximumRows
-        //     int startRowIndex
-        //     out int totalRowCount
-        //     string sortByExpression
         public IEnumerable<Category> CategoriesListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount,
                                                                 string sortByExpression)
         {
