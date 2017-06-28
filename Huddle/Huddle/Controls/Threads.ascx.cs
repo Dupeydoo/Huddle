@@ -24,8 +24,10 @@ namespace Huddle.Controls
         //     int startRowIndex
         //     out int totalRowCount
         //     string sortByExpression
-        public IQueryable StickyListView_GetData()
+        public IEnumerable<Thread> StickyListView_GetData(int maximumRows, int startRowIndex, 
+            out int totalRowCount, string sortByExpression)
         {
+            totalRowCount = 10;
             return new ThreadsData().GetCategoryThreadsFromDB(CategoryId, true);
         }
 
@@ -35,8 +37,10 @@ namespace Huddle.Controls
         //     int startRowIndex
         //     out int totalRowCount
         //     string sortByExpression
-        public IQueryable ThreadListView_GetData()
+        public IEnumerable<Thread> ThreadListView_GetData(int maximumRows, int startRowIndex,
+            out int totalRowCount, string sortByExpression)
         {
+            totalRowCount = 10;
             return new ThreadsData().GetCategoryThreadsFromDB(CategoryId, false);
         }
     }

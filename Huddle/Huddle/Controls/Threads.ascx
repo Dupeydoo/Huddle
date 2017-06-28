@@ -14,13 +14,25 @@
             <ItemTemplate>
                 <div class="row forum-row">
                     <div class="col-md-12">
-                        <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                        <div class="thread-main">
+                            <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                            <div class="thread-description">
+                                <asp:Literal id="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy %>'></asp:Literal>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </ItemTemplate>
             <AlternatingItemTemplate>
                 <div class="row forum-row-alternate">
-                    <div class="col-md-12"></div>
+                    <div class="col-md-12">
+                        <div class="thread-main">
+                            <asp:HyperLink id="ThreadTitle" runat="server" Text='<%# Item.Title %>' NavigateUrl='<%# "~/ViewThread.aspx?id=" + Item.Id %>'></asp:HyperLink>
+                            <div class="thread-description">
+                                <asp:Literal id="ThreadDescription" runat="server" Text='<%# "Started By: " + Item.CreatedBy %>'></asp:Literal>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </AlternatingItemTemplate>
             <LayoutTemplate>
@@ -46,6 +58,7 @@
                 </ul>
             </LayoutTemplate>
         </asp:ListView>
+        <asp:DataPager runat="server" ID="ThreadsPager" PagedControlID="ThreadListView"></asp:DataPager>
     </div>
     <div class="col-md-2"></div>
 </div>

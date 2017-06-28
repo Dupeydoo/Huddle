@@ -167,7 +167,8 @@ footer {
     background-color: #4b73b4;
 }
 
-    .container-fluid #MainContent .forum-row .category-description, .container-fluid #MainContent .forum-row-alternate .category-description {
+    .container-fluid #MainContent .forum-row .category-description, .container-fluid #MainContent .forum-row-alternate .category-description,
+    .container-fluid #MainContent .forum-row .thread-description, .container-fluid #MainContent .forum-row-alternate .thread-description {
         color: #e6e6e6;
         font-size: 14px;
         font-weight: 100;
@@ -177,6 +178,12 @@ footer {
         float: left;
         clear: right;
         width: 75%;
+    }
+
+    .container-fluid #MainContent .forum-row .thread-main, .container-fluid #MainContent .forum-row-alternate .thread-main {
+        float: left;
+        clear: right;
+        width: 15%;
     }
 
     .container-fluid #MainContent .forum-row .forum-categorymodify, .container-fluid #MainContent .forum-row-alternate .forum-categorymodify {

@@ -12,22 +12,22 @@ namespace Huddle.Data.ModelBinding
     {
         public ThreadsData() { }
 
-        public IQueryable<Thread> GetCategoryThreadsFromDB(int id)
+        public List<Thread> GetCategoryThreadsFromDB(int id)
         {
             using (HuddleEntities entities = new HuddleEntities())
             {
                 return  (from threads in entities.Threads
                         where threads.CategoryId == id
                         orderby threads.DateModified descending
-                        select threads);
+                        select threads).Take(10).ToList();
             }
         }
 
-        public IQueryable<ObjectThread> GetCategoryThreadsFromDB(int id, bool isSticky)
+        public IEnumerable<ObjectThread> GetCategoryThreadsFromDB(int id, bool isSticky)
         {
-            IQueryable<Thread> threads = GetCategoryThreadsFromDB(id);
+            List<Thread> threads = GetCategoryThreadsFromDB(id);
             //Parse threads to custom lightweight ef wrapper free objects
-            IQueryable<ObjectThread> output = ParseThreadSelect(threads);
+            List<ObjectThread> output = ParseThreadSelect(threads);
 
             if (isSticky)
             {
@@ -36,7 +36,7 @@ namespace Huddle.Data.ModelBinding
             return output.Where(thread => thread.IsSticky == false);
         }
 
-        private IQueryable<ObjectThread> ParseThreadSelect(IQueryable<Thread> threads)
+        private List<ObjectThread> ParseThreadSelect(List<Thread> threads)
         {
             List<ObjectThread> output = new List<ObjectThread>();
 
@@ -60,7 +60,7 @@ namespace Huddle.Data.ModelBinding
                 );
             }
 
-            return output.AsQueryable();
+            return output;
         }
     }
 }
