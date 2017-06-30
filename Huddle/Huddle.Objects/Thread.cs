@@ -23,6 +23,7 @@ namespace Huddle.Objects
         public int Views { get; set; }
         public bool IsSticky { get; set; }
         public int CategoryId { get; set; }
+        public int Replies { get; set; }
 
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -4,82 +4,83 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="HuddleModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="HuddleModelStoreContainer">
-    <EntitySet Name="Categories" EntityType="HuddleModel.Store.Categories" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Posts" EntityType="HuddleModel.Store.Posts" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Threads" EntityType="HuddleModel.Store.Threads" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK_Thread_Category" Association="HuddleModel.Store.FK_Thread_Category">
-      <End Role="Category" EntitySet="Categories" />
-      <End Role="Thread" EntitySet="Threads" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Post_Thread" Association="HuddleModel.Store.FK_Post_Thread">
-      <End Role="Thread" EntitySet="Threads" />
-      <End Role="Post" EntitySet="Posts" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="Categories">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="60" />
-    <Property Name="DateCreated" Type="datetime" Nullable="false" />
-    <Property Name="DateModified" Type="datetime" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="200" />
-  </EntityType>
-  <EntityType Name="Posts">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ThreadId" Type="int" Nullable="false" />
-    <Property Name="DateCreated" Type="datetime" Nullable="false" />
-    <Property Name="DateModified" Type="datetime" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="PostMessage" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Threads">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="60" />
-    <Property Name="DateCreated" Type="datetime" Nullable="false" />
-    <Property Name="DateModified" Type="datetime" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="Views" Type="int" Nullable="false" />
-    <Property Name="IsSticky" Type="bit" Nullable="false" />
-    <Property Name="CategoryId" Type="int" Nullable="false" />
-  </EntityType>
-  <Association Name="FK_Thread_Category">
-    <End Role="Category" Type="HuddleModel.Store.Categories" Multiplicity="1" />
-    <End Role="Thread" Type="HuddleModel.Store.Threads" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Category">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Thread">
-        <PropertyRef Name="CategoryId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Post_Thread">
-    <End Role="Thread" Type="HuddleModel.Store.Threads" Multiplicity="1" />
-    <End Role="Post" Type="HuddleModel.Store.Posts" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Thread">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Post">
-        <PropertyRef Name="ThreadId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-</Schema></edmx:StorageModels>
+    <Schema Namespace="HuddleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateModified" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ThreadId" Type="int" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateModified" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PostMessage" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Threads">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateModified" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Views" Type="int" Nullable="false" />
+          <Property Name="IsSticky" Type="bit" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="PostCount" Type="int" />
+        </EntityType>
+        <Association Name="FK_Post_Thread">
+          <End Role="Threads" Type="Self.Threads" Multiplicity="1" />
+          <End Role="Posts" Type="Self.Posts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Threads">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Posts">
+              <PropertyRef Name="ThreadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Thread_Category">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="Threads" Type="Self.Threads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Threads">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HuddleModelStoreContainer">
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Threads" EntityType="Self.Threads" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Post_Thread" Association="Self.FK_Post_Thread">
+            <End Role="Threads" EntitySet="Threads" />
+            <End Role="Posts" EntitySet="Posts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Thread_Category" Association="Self.FK_Thread_Category">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Threads" EntitySet="Threads" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HuddleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -89,8 +90,8 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DateModified" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateModified" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
@@ -102,8 +103,8 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ThreadId" Type="Int32" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DateModified" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateModified" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PostMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Thread" Relationship="Self.FK_Post_Thread" FromRole="Post" ToRole="Thread" />
@@ -114,8 +115,8 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DateModified" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateModified" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Views" Type="Int32" Nullable="false" />
@@ -123,6 +124,7 @@
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Thread_Category" FromRole="Thread" ToRole="Category" />
           <NavigationProperty Name="Posts" Relationship="Self.FK_Post_Thread" FromRole="Thread" ToRole="Post" />
+          <Property Name="PostCount" Type="Int32" />
         </EntityType>
         <Association Name="FK_Thread_Category">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
@@ -195,7 +197,8 @@
     <EntitySetMapping Name="Threads">
       <EntityTypeMapping TypeName="IsTypeOf(HuddleModel.Thread)">
         <MappingFragment StoreEntitySet="Threads">
-          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PostCount" ColumnName="PostCount" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
           <ScalarProperty Name="DateModified" ColumnName="DateModified" />

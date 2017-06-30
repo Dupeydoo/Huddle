@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Entity;
 using Huddle.Data.Entities;
 using ObjectThread = Huddle.Objects.Thread;
 
@@ -16,7 +14,7 @@ namespace Huddle.Data.ModelBinding
         {
             using (HuddleEntities entities = new HuddleEntities())
             {
-                return  (from threads in entities.Threads
+                return (from threads in entities.Threads
                         where threads.CategoryId == id
                         orderby threads.DateModified descending
                         select threads).Take(10).ToList();
