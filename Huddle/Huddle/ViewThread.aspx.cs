@@ -11,7 +11,30 @@ namespace Huddle
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["id"] != null)
+            {
+                try
+                {
+                    int id = Convert.ToInt32(Request.QueryString["id"]);
+                }
 
+                catch (System.FormatException)
+                {
+                    SetDefaultOnError();
+                }
+            }
+
+            else
+            {
+                SetDefaultOnError();
+            }
+        }
+
+        private void SetDefaultOnError()
+        {
+            Page.Title = "View Thread";
+            PostsPanel.Visible = false;
+            ErrorPanel.Visible = true;
         }
     }
 }
