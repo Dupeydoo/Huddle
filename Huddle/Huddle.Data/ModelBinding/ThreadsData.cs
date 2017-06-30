@@ -53,7 +53,8 @@ namespace Huddle.Data.ModelBinding
                         IsSticky = thread.IsSticky,
                         ModifiedBy = thread.ModifiedBy,
                         Title = thread.Title,
-                        Views = thread.Views
+                        Views = thread.Views,
+                        Replies = thread.PostCount
                     }
                 );
             }

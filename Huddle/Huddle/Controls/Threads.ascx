@@ -34,7 +34,7 @@
                         </div>
                         <div class="thread-popularity">
                             <p>
-                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: 5" %>'></asp:Literal>
+                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: " + Item.Replies %>'></asp:Literal>
                                 <br />
                                 <asp:Literal runat="server" ID="ThreadViews" Text='<%# "Views: " + Item.Views %>'></asp:Literal>
                             </p>
@@ -60,7 +60,7 @@
                         </div>
                         <div class="thread-popularity">
                             <p>
-                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: 5" %>'></asp:Literal>
+                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: " + Item.Replies %>'></asp:Literal>
                                 <br />
                                 <asp:Literal runat="server" ID="ThreadViews" Text='<%# "Views: " + Item.Views %>'></asp:Literal>
                             </p>
@@ -98,7 +98,7 @@
                         </div>
                         <div class="thread-popularity">
                             <p>
-                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: 5" %>'></asp:Literal>
+                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: " + Item.Replies %>'></asp:Literal>
                                 <br />
                                 <asp:Literal runat="server" ID="ThreadViews" Text='<%# "Views: " + Item.Views %>'></asp:Literal>
                             </p>
@@ -124,7 +124,7 @@
                         </div>
                         <div class="thread-popularity">
                             <p>
-                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: 5" %>'></asp:Literal>
+                                <asp:Literal runat="server" ID="ThreadReplies" Text='<%# "Replies: " + Item.Replies %>'></asp:Literal>
                                 <br />
                                 <asp:Literal runat="server" ID="ThreadViews" Text='<%# "Views: " + Item.Views %>'></asp:Literal>
                             </p>
