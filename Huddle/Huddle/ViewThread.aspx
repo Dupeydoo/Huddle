@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="View Thread" Language="C#" MasterPageFile="~/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="ViewThread.aspx.cs" Inherits="Huddle.ViewThread" %>
+
+<%@ Register Src="~/Controls/Posts.ascx" TagPrefix="Huddle" TagName="Posts" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="server">
@@ -12,7 +15,7 @@
         </div>
     </asp:Panel>
     <asp:Panel ID="PostsPanel" runat="server" Visible="true">
-        
+        <Huddle:Posts runat="server" id="Posts" />
     </asp:Panel>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cpClientScript" runat="server">

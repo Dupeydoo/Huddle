@@ -129,6 +129,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Controls\Categories.ascx" />
+    <Content Include="Controls\Posts.ascx" />
     <Content Include="Controls\Threads.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -242,6 +243,13 @@
     </Compile>
     <Compile Include="Controls\Categories.ascx.designer.cs">
       <DependentUpon>Categories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Posts.ascx.cs">
+      <DependentUpon>Posts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Posts.ascx.designer.cs">
+      <DependentUpon>Posts.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Threads.ascx.cs">
       <DependentUpon>Threads.ascx</DependentUpon>

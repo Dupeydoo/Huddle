@@ -18,6 +18,7 @@ namespace Huddle
                 {
                     int id = Convert.ToInt32(Request.QueryString["id"]);
                     Page.Title = this.GetThreadTitleFromDB(id);
+                    Posts.ThreadId = id;
                 }
 
                 catch (System.FormatException)
