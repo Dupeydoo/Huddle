@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Huddle.Data.ModelBinding;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,7 @@ namespace Huddle
                 try
                 {
                     int id = Convert.ToInt32(Request.QueryString["id"]);
+                    Page.Title = this.GetThreadTitleFromDB(id);
                 }
 
                 catch (System.FormatException)
@@ -28,6 +30,11 @@ namespace Huddle
             {
                 SetDefaultOnError();
             }
+        }
+
+        private string GetThreadTitleFromDB(int id)
+        {
+            return new ThreadsData().GetThreadTitleFromDB(id);
         }
 
         private void SetDefaultOnError()

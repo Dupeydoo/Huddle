@@ -61,5 +61,15 @@ namespace Huddle.Data.ModelBinding
 
             return output;
         }
+
+        public string GetThreadTitleFromDB(int id)
+        {
+            using (HuddleEntities entities = new HuddleEntities())
+            {
+                return (from threads in entities.Threads
+                        where threads.Id == id
+                        select threads.Title).SingleOrDefault();
+            }
+        }
     }
 }
