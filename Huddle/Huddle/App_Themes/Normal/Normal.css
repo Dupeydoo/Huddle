@@ -240,20 +240,30 @@ footer {
     min-width: 200px;
 }
 
-.container-fluid #MainContent .post {
+.container-fluid #MainContent .forum-wrapper .post {
     background-color: #293f63;
     margin: 10px 10px;
 }
 
-.container-fluid #MainContent .post .post-body h3 {
+.container-fluid #MainContent .forum-wrapper .post .post-header
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container-fluid #MainContent .forum-wrapper .post .post-header h2 {
+    max-width: 50%;
+}
+
+.container-fluid #MainContent .forum-wrapper .post .post-body h3 {
     font-size: 15px;
 }
 
-.container-fluid #MainContent .post .post-body article {
+.container-fluid #MainContent .forum-wrapper .post .post-body article {
 
 }
 
-.container-fluid #MainContent .post .post-body .left-profile {
+.container-fluid #MainContent .forum-wrapper .post .post-body .left-profile {
     float: left;
 }
 

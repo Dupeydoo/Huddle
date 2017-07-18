@@ -8,7 +8,7 @@
                     <div class="post">
                         <div class="post-header">
                             <h2>
-                                <asp:Literal runat="server" ID="PostCreated" Text='<%# Item.DateCreated %>'></asp:Literal>
+                                <asp:Literal runat="server" ID="PostCreated" Text='<%# Item.DateCreated.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </h2>
                             <div class="rightfloater">
                                 <p>
@@ -31,7 +31,7 @@
                                 <div class="signature">
                                     Signature goes here
                                 </div>
-                                <asp:Literal runat="server" ID="PostModified" Text='<%# Item.DateModified %>'></asp:Literal>
+                                <asp:Literal runat="server" ID="PostModified" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </div>
                         </div>
                     </div>
