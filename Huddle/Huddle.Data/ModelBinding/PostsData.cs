@@ -8,7 +8,7 @@ using ObjectPost = Huddle.Objects.Post;
 
 namespace Huddle.Data.ModelBinding
 {
-    class PostsData
+    public class PostsData
     {
         public IEnumerable<ObjectPost> GetPostsFromDB(int threadId)
         {

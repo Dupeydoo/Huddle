@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Huddle.Objects;
+using Huddle.Data.ModelBinding;
 
 namespace Huddle.Controls
 {
@@ -17,15 +18,11 @@ namespace Huddle.Controls
 
         }
 
-        // The return type can be changed to IEnumerable, however to support
-        // paging and sorting, the following parameters must be added:
-        //     int maximumRows
-        //     int startRowIndex
-        //     out int totalRowCount
-        //     string sortByExpression
-        public IQueryable<Post> PostsView_GetData()
+        public IEnumerable<Post> PostsView_GetData(int? maximumRows, int? startRowIndex, out int totalRowCount, 
+            string sortByExpression)
         {
-            return null;
+            totalRowCount = 5;
+            return new PostsData().GetPostsFromDB(ThreadId);
         }
     }
 }
