@@ -76,6 +76,7 @@
       <DependentUpon>HuddleEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelBinding\CategoriesData.cs" />
+    <Compile Include="ModelBinding\PostsData.cs" />
     <Compile Include="ModelBinding\ThreadsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
