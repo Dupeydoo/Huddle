@@ -240,6 +240,11 @@ footer {
     min-width: 200px;
 }
 
+.container-fluid #MainContent .post {
+    background-color: #293f63;
+    margin: 10px 10px;
+}
+
 .container-fluid #MainContent .post .post-body h3 {
     font-size: 15px;
 }

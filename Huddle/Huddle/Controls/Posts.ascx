@@ -7,22 +7,32 @@
                 <ItemTemplate>
                     <div class="post">
                         <div class="post-header">
-                            <h2>Timestamp</h2>
+                            <h2>
+                                <asp:Literal runat="server" ID="PostCreated" Text='<%# Item.DateCreated %>'></asp:Literal>
+                            </h2>
                             <div class="rightfloater">
-                                <p>#1</p>
+                                <p>
+                                    <asp:Literal runat="server" ID="PostNumber" Text="1"></asp:Literal>
+                                </p>
                             </div>
                         </div>
                         <div class="post-body">
                             <aside class="left-profile">
-
                             </aside>
-                            <h3>Post Title</h3>
+                            <h3>
+                                <asp:Literal runat="server" ID="ThreadTitle" Text='<%# Item.ThreadId %>'></asp:Literal>
+                            </h3>
                             <article>
-                                Post Message here folks
+                                <p>
+                                    <asp:Literal runat="server" ID="PostMessage" Text='<%# Item.PostMessage %>'></asp:Literal>
+                                </p>
                             </article>
-                            <footer>
-                                Signature goes here
-                            </footer>
+                            <div class="post-footer">
+                                <div class="signature">
+                                    Signature goes here
+                                </div>
+                                <asp:Literal runat="server" ID="PostModified" Text='<%# Item.DateModified %>'></asp:Literal>
+                            </div>
                         </div>
                     </div>
                 </ItemTemplate>
