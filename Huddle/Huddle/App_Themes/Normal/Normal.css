@@ -32,6 +32,10 @@ body a, body a:visited, body a:active {
     background-color: #0f1724;
 }
 
+.rightfloater {
+    float: right;
+}
+
 /*******************************************
 
     MasterPage
@@ -155,8 +159,12 @@ footer {
     margin-bottom: 0px;
 }
 
-.container-fluid #MainContent .section-heading {
+.container-fluid #MainContent .section-heading, .container-fluid #MainContent .post-header {
     background-color: #76b9d5;
+}
+
+.container-fluid #MainContent .post-header h2 {
+    font-size: 16px;
 }
 
 .container-fluid #MainContent .sub-section-heading {
@@ -231,6 +239,20 @@ footer {
     margin-top: 2px;
     min-width: 200px;
 }
+
+.container-fluid #MainContent .post .post-body h3 {
+    font-size: 15px;
+}
+
+.container-fluid #MainContent .post .post-body article {
+
+}
+
+.container-fluid #MainContent .post .post-body .left-profile {
+    float: left;
+}
+
+
 
 /*******************************************
 
