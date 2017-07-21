@@ -16,23 +16,26 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="post-body">
+                        <div class="post-body clearfix">
                             <aside class="left-profile">
+                                Hello World!
                             </aside>
-                            <h3>
-                                <asp:Literal runat="server" ID="ThreadTitle" Text='<%# Item.ThreadId %>'></asp:Literal>
-                            </h3>
-                            <article>
-                                <p>
-                                    <asp:Literal runat="server" ID="PostMessage" Text='<%# Item.PostMessage %>'></asp:Literal>
-                                </p>
-                            </article>
-                            <div class="post-footer">
-                                <div class="signature">
-                                    Signature goes here
+                            <section class="post-content">
+                                <h3>
+                                    <asp:Literal runat="server" ID="ThreadTitle" Text='<%# Item.ThreadId %>'></asp:Literal>
+                                </h3>
+                                <article>
+                                    <p>
+                                        <asp:Literal runat="server" ID="PostMessage" Text='<%# Item.PostMessage %>'></asp:Literal>
+                                    </p>
+                                </article>
+                                <div class="post-footer">
+                                    <div class="signature">
+                                        Signature goes here
+                                    </div>
+                                    <asp:Literal runat="server" ID="PostModified" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                                 </div>
-                                <asp:Literal runat="server" ID="PostModified" Text='<%# Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
-                            </div>
+                            </section>
                         </div>
                     </div>
                 </ItemTemplate>

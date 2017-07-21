@@ -254,20 +254,30 @@ footer {
 .container-fluid #MainContent .forum-wrapper .post .post-header h2 {
     max-width: 50%;
     margin-top: 10px;
+    float: left;
+}
+
+.container-fluid #MainContent .forum-wrapper .post .post-header .rightfloater p {
+    margin-top: 10px;
 }
 
 .container-fluid #MainContent .forum-wrapper .post .post-body h3 {
     font-size: 15px;
+    margin-top: 0px;
 }
 
-.container-fluid #MainContent .forum-wrapper .post .post-body article {
-
+.container-fluid #MainContent .forum-wrapper .post .post-body .post-content {
+    float: left;
+    max-width: 80%;
+    margin: 10px;
 }
 
 .container-fluid #MainContent .forum-wrapper .post .post-body .left-profile {
     float: left;
+    min-width: 15%;
+    min-height: 100%;
+    margin: 10px;
 }
-
 
 
 /*******************************************
