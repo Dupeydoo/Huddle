@@ -6,7 +6,7 @@
             <asp:ListView ID="PostsView" runat="server" SelectMethod="PostsView_GetData" ItemType="Huddle.Objects.Post">
                 <ItemTemplate>
                     <div class="post">
-                        <div class="post-header">
+                        <div class="post-header clearfix">
                             <h2>
                                 <asp:Literal runat="server" ID="PostCreated" Text='<%# Item.DateCreated.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </h2>

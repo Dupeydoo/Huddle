@@ -253,6 +253,7 @@ footer {
 
 .container-fluid #MainContent .forum-wrapper .post .post-header h2 {
     max-width: 50%;
+    margin-top: 10px;
 }
 
 .container-fluid #MainContent .forum-wrapper .post .post-body h3 {
