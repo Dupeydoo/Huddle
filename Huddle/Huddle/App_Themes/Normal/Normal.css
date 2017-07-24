@@ -279,6 +279,11 @@ footer {
     margin: 10px;
 }
 
+    .container-fluid #MainContent .forum-wrapper .post .post-body article, .container-fluid #MainContent .forum-wrapper .post .post-body .post-content .thread-title {
+        border-bottom: thin solid white;
+        padding-bottom: 10px;
+    }
+
 
 /*******************************************
 
