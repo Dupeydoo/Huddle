@@ -22,7 +22,7 @@
                             </aside>
                             <section class="post-content">
                                 <h3 class="thread-title">
-                                    <asp:Literal runat="server" ID="ThreadTitle" Text='<%# Item.ThreadId %>'></asp:Literal>
+                                    <asp:Literal runat="server" ID="ThreadTitle" Text="<%# Page.Title %>"></asp:Literal>
                                 </h3>
                                 <article>
                                     <p>
