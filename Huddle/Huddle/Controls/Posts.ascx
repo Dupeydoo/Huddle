@@ -33,7 +33,7 @@
                                     <div class="signature">
                                         Signature goes here
                                     </div>
-                                    <asp:Literal runat="server" ID="PostModified" Text='<%# "Date Edited" + Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
+                                    <asp:Literal runat="server" ID="PostModified" Text='<%# "Date Edited: " + Item.DateModified.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                                 </div>
                             </section>
                         </div>

@@ -10,7 +10,7 @@ namespace Huddle.Data.ModelBinding
 {
     public class PostsData
     {
-        public IEnumerable<ObjectPost> GetPostsFromDB(int threadId)
+        public IEnumerable<ObjectPost> GetPostsFromDB(int threadId, int postsSelected)
         {
             List<Post> postSelect = new List<Post>();
             List<ObjectPost> output = new List<ObjectPost>();
@@ -20,8 +20,8 @@ namespace Huddle.Data.ModelBinding
                 postSelect =
                        (from posts in entities.Posts
                         where posts.ThreadId == threadId
-                        orderby posts.DateModified
-                        select posts).Take(5).ToList();
+                        orderby posts.DateCreated
+                        select posts).Skip(postsSelected).Take(10).ToList();
             }
 
             // Parse the posts into non-ef wrapped objects

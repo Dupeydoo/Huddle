@@ -11,19 +11,28 @@ namespace Huddle.Controls
 {
     public partial class Posts : System.Web.UI.UserControl
     {
-        public int ThreadId { get; set; }
         private int PostNum = 1;
+        private int PostsSelected;
+
+        public int ThreadId { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.PostsSelected = 0;
         }
 
         public IEnumerable<Post> PostsView_GetData(int? maximumRows, int? startRowIndex, out int totalRowCount,
             string sortByExpression)
         {
-            totalRowCount = 5;
-            return new PostsData().GetPostsFromDB(ThreadId);
+            totalRowCount = 10;
+            IEnumerable<Post> posts = new PostsData().GetPostsFromDB(ThreadId, this.PostsSelected);
+
+            if(posts.Count() > 9)
+            {
+                this.PostsSelected += 10;
+                return posts;
+            }
+            return posts;
         }
 
         protected void PostsView_ItemDataBound(object sender, ListViewItemEventArgs e)
