@@ -45,7 +45,11 @@
                     </ul>
                 </LayoutTemplate>
             </asp:ListView>
-            <asp:DataPager runat="server" ID="PostsPager" PagedControlID="PostsView"></asp:DataPager>
+            <asp:DataPager runat="server" ID="PostsPager" PagedControlID="PostsView">
+                <Fields>
+                    <asp:NumericPagerField ButtonCount="10" />
+                </Fields>
+            </asp:DataPager>
         </div>
     </div>
 </div>
