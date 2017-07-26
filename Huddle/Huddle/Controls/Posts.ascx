@@ -3,7 +3,7 @@
 <div class="forum-wrapper">
     <div class="row">
         <div class="col-md-12">
-            <asp:ListView ID="PostsView" runat="server" SelectMethod="PostsView_GetData" ItemType="Huddle.Objects.Post" OnItemDataBound="PostsView_ItemDataBound">
+            <asp:ListView ID="PostsView" runat="server" SelectMethod="PostsView_GetData" ItemType="Huddle.Objects.Post" OnItemDataBound="PostsView_ItemDataBound" OnPagePropertiesChanging="PostsView_PagePropertiesChanging">
                 <ItemTemplate>
                     <div class="post">
                         <div class="post-header clearfix">
@@ -50,6 +50,7 @@
                     <asp:NumericPagerField ButtonCount="10" />
                 </Fields>
             </asp:DataPager>
+            <asp:Literal runat="server" ID="Test"></asp:Literal>
         </div>
     </div>
 </div>

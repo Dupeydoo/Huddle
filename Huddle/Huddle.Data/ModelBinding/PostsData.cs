@@ -21,7 +21,7 @@ namespace Huddle.Data.ModelBinding
                        (from posts in entities.Posts
                         where posts.ThreadId == threadId
                         orderby posts.DateCreated
-                        select posts).Skip(postsSelected).Take(10).ToList();
+                        select posts).Skip(postsSelected).Take(12).ToList();
             }
 
             // Parse the posts into non-ef wrapped objects

@@ -24,27 +24,23 @@ namespace Huddle.Controls
         public IEnumerable<Post> PostsView_GetData(int? maximumRows, int? startRowIndex, out int totalRowCount,
             string sortByExpression)
         {
-            totalRowCount = 10;
-            IEnumerable<Post> posts = new PostsData().GetPostsFromDB(ThreadId, this.PostsSelected);
-
-            if(posts.Count() > 9)
-            {
-                this.PostsSelected += 10;
-                return posts;
-            }
-            return posts;
+            totalRowCount = 12; //DYNAMIC
+            return new PostsData().GetPostsFromDB(ThreadId, this.PostsSelected);
         }
 
         protected void PostsView_ItemDataBound(object sender, ListViewItemEventArgs e)
         {
             Literal pNumber = (Literal)e.Item.FindControl("PostNumber");
             pNumber.Text = "#" + PostNum.ToString();
-            this.IncrementPostNum(ref PostNum);
+            this.PostNum++;
         }
 
-        private void IncrementPostNum(ref int postNumber)
+        protected void PostsView_PagePropertiesChanging(object sender, PagePropertiesChangingEventArgs e)
         {
-            postNumber++;
+            PostsPager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
+            PostsView.DataBind();
         }
+
+        
     }
 }
