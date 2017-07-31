@@ -5,7 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Huddle.Objects;
+using Huddle.Objects.Common;
 using Huddle.Data.ModelBinding;
+using Huddle.Enums;
 
 namespace Huddle.Controls
 {
@@ -24,7 +26,7 @@ namespace Huddle.Controls
         public IEnumerable<Post> PostsView_GetData(int? maximumRows, int? startRowIndex, out int totalRowCount,
             string sortByExpression)
         {
-            totalRowCount = 12; //DYNAMIC
+            totalRowCount = (int)PagingEnum.PagerBuffer;
             return new PostsData().GetPostsFromDB(ThreadId, this.PostsSelected);
         }
 
@@ -37,6 +39,11 @@ namespace Huddle.Controls
 
         protected void PostsView_PagePropertiesChanging(object sender, PagePropertiesChangingEventArgs e)
         {
+            if(HuddleCommon.IsDivisible(e.StartRowIndex, (int)(PagingEnum.PagerBufferMultiplier)))
+            {
+
+            }
+
             PostsPager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
             PostsView.DataBind();
         }
