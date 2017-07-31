@@ -15,6 +15,12 @@ namespace Huddle.Controls
     {
         private int PostNum = 1;
         private int PostsSelected;
+        private int RowCount;
+
+        private Posts()
+        {
+            this.RowCount = (int)PagingEnum.PagerBuffer;
+        }
 
         public int ThreadId { get; set; }
 
@@ -26,7 +32,7 @@ namespace Huddle.Controls
         public IEnumerable<Post> PostsView_GetData(int? maximumRows, int? startRowIndex, out int totalRowCount,
             string sortByExpression)
         {
-            totalRowCount = (int)PagingEnum.PagerBuffer;
+            totalRowCount = this.RowCount;
             return new PostsData().GetPostsFromDB(ThreadId, this.PostsSelected);
         }
 
@@ -41,7 +47,7 @@ namespace Huddle.Controls
         {
             if(HuddleCommon.IsDivisible(e.StartRowIndex, (int)(PagingEnum.PagerBufferMultiplier)))
             {
-
+                this.RowCount += (int)PagingEnum.PagerBuffer;
             }
 
             PostsPager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
