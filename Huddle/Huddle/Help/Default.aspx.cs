@@ -7,6 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace Huddle.Help
 {
+    /*
+     * A class to represent the help home page
+     * 
+     * @author  James
+     * @version 1.0.0
+    */
     public partial class Default : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)

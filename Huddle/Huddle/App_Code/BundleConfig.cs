@@ -7,6 +7,13 @@ using System.Web.UI;
 
 namespace Huddle
 {
+    /*
+     * A class to package bundles from multiple files. By decreasing the number of HTTP
+     * requests needed load times can be improved.
+     * 
+     * @author  Automated and James
+     * @version Automated changes
+    */
     public class BundleConfig
     {
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkID=303951

@@ -9,6 +9,10 @@ namespace Huddle.Admin
 {
     public partial class UserManagement : BasePage
     {
+        /*
+         A class representing the page where admins and site owners can
+         manage and edit users
+         */
         protected void Page_Load(object sender, EventArgs e)
         {
 
