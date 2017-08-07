@@ -8,8 +8,28 @@ using ObjectPost = Huddle.Objects.Post;
 
 namespace Huddle.Data.ModelBinding
 {
+    /*
+     * The data class for posts. Using entity framework with modelbinding the data is
+     * displayed to the user.
+     * 
+     * @author   James
+     * @version  2.0.0
+    */
     public class PostsData
     {
+        /*
+         * Default constructor for use in a facade style to call data methods. 
+        */
+        public PostsData() { }
+
+        /*
+         * The central data method for selecting posts from the database.
+         * 
+         * @see      Huddle.Objects.Post
+         * @returns  An IEnumerable of non ef wrapped post objects
+         * @author   James
+         * @version  1.0.0
+        */
         public IEnumerable<ObjectPost> GetPostsFromDB(int threadId, int postsSelected)
         {
             List<Post> postSelect = new List<Post>();
@@ -30,6 +50,16 @@ namespace Huddle.Data.ModelBinding
             return output;
         }
 
+        /*
+         * A helper method which deals with translating ef wrapped objects into non ef wrapped objects.
+         * The result is lightweight objects to be passed around.
+         * 
+         * @param    posts   A list of ef posts
+         * @param    output  A list of huddle posts
+         * @see      Huddle.Objects.Post
+         * @author   James
+         * @version  1.0.0
+        */
         private void ParsePostSelect(List<Post> posts, List<ObjectPost> output)
         {
             for(int p = 0; p < posts.Count; p++)

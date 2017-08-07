@@ -10,9 +10,22 @@ using System.Web.SessionState;
 
 namespace Huddle
 {
+    /*
+     * A class to manage global application events.
+     * 
+     * @author  James
+     * @version 1.0.0
+    */
     public class Global : System.Web.HttpApplication
     {
-
+        /*
+         * The event that runs on app start. Bundles and routes are registered.
+         * 
+         * @param sender  Control who is actioned upon
+         * @param e       Arguments to the event
+         * @author        James
+         * @version       1.0.0 
+        */
         protected void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup

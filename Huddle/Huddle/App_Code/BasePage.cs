@@ -5,11 +5,12 @@ using System.Web;
 namespace Huddle
 {
     /*
-     A base page for all pages in the Huddle universe. Expect default page behaviour default
-     to all pages
-
-     @version 1.1.0
-     */
+     * A base page for all pages in the Huddle universe. Expect default page behaviour default
+     * to all pages
+     * 
+     * @author   James
+     * @version  1.1.0
+    */
     public class BasePage : System.Web.UI.Page
     {
         /*
