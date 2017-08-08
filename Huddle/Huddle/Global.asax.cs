@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
+using Huddle.Objects.Common;
+
 namespace Huddle
 {
     /*

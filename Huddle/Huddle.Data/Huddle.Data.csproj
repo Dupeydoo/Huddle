@@ -75,6 +75,7 @@
     <Compile Include="Entities\Thread.cs">
       <DependentUpon>HuddleEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Misc\MiscData.cs" />
     <Compile Include="ModelBinding\CategoriesData.cs" />
     <Compile Include="ModelBinding\PostsData.cs" />
     <Compile Include="ModelBinding\ThreadsData.cs" />

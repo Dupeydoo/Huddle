@@ -105,6 +105,10 @@ namespace Huddle.Controls
                 this.RowCount += (int)PagingEnum.PagerBuffer;
             }
 
+            // Get the current page and set PostsSelected to select the correct data.
+            int currentPage = HuddleCommon.CalculateCurrentPage(e.StartRowIndex, e.MaximumRows);
+            this.PostsSelected = (currentPage - 1) * 10;
+
             PostsPager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
             PostsView.DataBind();
         }

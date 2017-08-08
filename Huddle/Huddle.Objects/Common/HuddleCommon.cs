@@ -27,5 +27,20 @@ namespace Huddle.Objects.Common
         {
             return x % y == 0;
         }
+
+        /*
+         * This helper method calculates the current page of a DataPager
+         * 
+         * @param    maxRows  The max rows per page
+         * @param    rowIndex The index of the page start row
+         * @returns  The current page
+         * @author   James
+         * @version  1.0.0
+        */
+        public static int CalculateCurrentPage(int rowIndex, int maxRows)
+        {
+            return ((rowIndex) / maxRows) + 1;
+        }
+
     }
 }
