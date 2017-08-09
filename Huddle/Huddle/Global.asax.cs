@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
+using Huddle.Data.Misc;
 using Huddle.Objects.Common;
 
 namespace Huddle
@@ -40,6 +41,8 @@ namespace Huddle
                     Path = "~/Scripts/jquery-3.1.1.min.js"
                 }
             );
+
+            this.RegisterCategoryCount();
         }
 
         protected void Session_Start(object sender, EventArgs e)
@@ -70,6 +73,21 @@ namespace Huddle
         protected void Application_End(object sender, EventArgs e)
         {
 
+        }
+
+        /*
+         * This method sets up the category count on startup. This allows us
+         * to check if an invalid category is input when a category is viewed.
+         * This should only happen when cheeky people who know how urls work 
+         * mess around.
+         * 
+         * @author   James
+         * @version  1.0.0
+        */
+        private void RegisterCategoryCount()
+        {
+            int cc = new MiscData().GetCategoryCount();
+            HuddleCommon.CategoryCount = cc;
         }
     }
 }

@@ -14,6 +14,9 @@ namespace Huddle.Objects.Common
     */
     public static class HuddleCommon
     {
+        // The count of categories set in Global to allow it to be read by ViewCategory
+        public static int CategoryCount { get; set; }
+
         /*
          * This method checks to see if integer x is divisible by integer y
          * 

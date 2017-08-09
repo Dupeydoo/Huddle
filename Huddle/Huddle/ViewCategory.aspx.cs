@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Huddle.Data.Entities;
 using Huddle.Data.ModelBinding;
+using Huddle.Objects.Common;
 
 namespace Huddle
 {
@@ -28,14 +29,22 @@ namespace Huddle
         */
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Request.QueryString["id"] != null)
+            string reqId = Request.QueryString["id"];
+            if(reqId != null) 
             {
                 try {
-                    int id = Convert.ToInt32(Request.QueryString["id"]);
-                    // Need the title for page
-                    Page.Title = this.GetCategoryTitle(id);
-                    // Pass the id to the control
-                    Threads.CategoryId = id;
+                    int id = Convert.ToInt32(reqId);
+                    if(id <= HuddleCommon.CategoryCount && id > 0)
+                    {
+                        Page.Title = this.GetCategoryTitle(id);
+                        // Pass the id to the control
+                        Threads.CategoryId = id;
+                    }   
+
+                    else
+                    {
+                        SetDefaultOnError();
+                    }
                 }
 
                 catch(System.FormatException)
