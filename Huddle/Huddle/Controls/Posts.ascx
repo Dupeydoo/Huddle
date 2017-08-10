@@ -5,14 +5,15 @@
         <div class="col-md-12">
             <asp:ListView ID="PostsView" runat="server" SelectMethod="PostsView_GetData" ItemType="Huddle.Objects.Post" OnPagePropertiesChanging="PostsView_PagePropertiesChanging">
                 <ItemTemplate>
-                    <div class="post">
+                    <div class="post" id='<%# Item.Id.ToString() %>'>
                         <div class="post-header clearfix">
                             <h2>
                                 <asp:Literal runat="server" ID="PostCreated" Text='<%# "Date Posted: " + Item.DateCreated.ToLocalTime().ToString("ddd d MMMM yyyy, HH:mm") %>'></asp:Literal>
                             </h2>
                             <div class="rightfloater">
                                 <p>
-                                    <asp:Literal runat="server" ID="PostNumber"></asp:Literal>
+                                    <asp:HyperLink runat="server" ID="PostNumber" NavigateUrl='<%# HttpContext.Current.Request.Url.AbsoluteUri + "#" + Item.Id.ToString() %>' 
+                                        Text='<%# "This is forum post number: #" + Item.Id.ToString() %>'></asp:HyperLink>
                                 </p>
                             </div>
                         </div>
