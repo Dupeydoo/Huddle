@@ -24,18 +24,6 @@ namespace Huddle.Controls
         private int PostsSelected;           // A figure to allow any number of posts to be skipped on the next page transition
         private int RowCount;                // Provides the mechanism to dynamically expand the totalRowCount. This is needed to display pages in the Pager
 
-        /*
-         * The posts constructor which sets up the buffer mechanism
-         * 
-         * @author        James
-         * @version       1.0.0
-        */
-        private Posts()
-        {
-            // Intitialise the row count to a single standard page buffer length
-            this.RowCount = (int)PagingEnum.PagerBuffer;
-        }
-
         public int ThreadId { get; set; }   // The thread id is passed via the control attributes to allow us to select the correct data
 
         /*
@@ -48,6 +36,8 @@ namespace Huddle.Controls
         */
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Intitialise the row count to a single standard page buffer length
+            this.RowCount = (int)PagingEnum.PagerBuffer;
             this.PostsSelected = 0;
         }
 
