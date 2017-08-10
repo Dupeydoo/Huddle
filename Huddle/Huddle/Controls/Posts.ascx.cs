@@ -20,7 +20,6 @@ namespace Huddle.Controls
     */
     public partial class Posts : System.Web.UI.UserControl
     {
-        private int PostNum = 1;             // A local counter used to present a numerating of posts to the user
         private int PostsSelected;           // A figure to allow any number of posts to be skipped on the next page transition
         private int RowCount;                // Provides the mechanism to dynamically expand the totalRowCount. This is needed to display pages in the Pager
 
@@ -58,23 +57,6 @@ namespace Huddle.Controls
         {
             totalRowCount = this.RowCount;
             return new PostsData().GetPostsFromDB(ThreadId, this.PostsSelected);
-        }
-
-        /*
-         * The databound event for the posts listview. Here we find the post number
-         * and string it before incrementing the counter for next time
-         * 
-         * @param sender  Control who is actioned upon
-         * @param e       Arguments to the event
-         * @author        James
-         * @version       1.0.0
-        */
-        protected void PostsView_ItemDataBound(object sender, ListViewItemEventArgs e)
-        {
-            // This control is within the listview and thus we can only find it by searching
-            Literal pNumber = (Literal)e.Item.FindControl("PostNumber");
-            pNumber.Text = "#" + PostNum.ToString();
-            this.PostNum++;
         }
 
         /*
