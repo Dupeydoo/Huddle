@@ -83,7 +83,7 @@ namespace Huddle
         {
             Page.Title = "View Category";
             ThreadsPanel.Visible = false;
-            ErrorPanel.Visible = true;
+            ErrorPanel.Visible = true;   
         }
 
     }

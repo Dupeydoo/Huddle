@@ -31,10 +31,11 @@ namespace Huddle
                 try
                 {
                     int id = Convert.ToInt32(Request.QueryString["id"]);
-                    // Need the title for page
                     Page.Title = this.GetThreadTitleFromDB(id);
                     // Pass the id to the control
                     Posts.ThreadId = id;
+
+                    if (String.IsNullOrEmpty(Page.Title)) SetDefaultOnError();
                 }
 
                 catch (System.FormatException)
